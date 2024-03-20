@@ -2,16 +2,28 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
-import gfm from 'remark-gfm'; // Este es el plugin que necesitas
+import gfm from 'remark-gfm';
 import Link from "next/link";
 import Head from "next/head";
 import { config } from "../../config";
 import styles from "./post.module.css";
 
-export default function PostPage({
-  frontmatter: { title, date, cover_image, alt, excerpt },
-  content,
-}) {
+interface Frontmatter {
+  title: string;
+  date: string;
+  cover_image: string;
+  alt: string;
+  excerpt: string;
+}
+
+interface PostProps {
+  frontmatter: Frontmatter;
+  content: string;
+}
+
+export default function PostPage({ frontmatter, content }: PostProps) {
+  const { title, date, cover_image, alt, excerpt } = frontmatter;
+
   return (
     <>
       <Head>
@@ -45,17 +57,16 @@ export default function PostPage({
             <img src={cover_image} alt={alt} />
           </div>
           <div className={`py-3 mt-3 text-base ${styles.markdownContent}`}>
-            {/* Procesa el contenido Markdown */}
             <ReactMarkdown
-  remarkPlugins={[gfm]} // Añade el plugin aquí
-  className={styles.markdownContent}
-  components={{
-    blockquote: BlockquoteComponent,
-    code: CodeComponent,
-  }}
->
-  {content}
-</ReactMarkdown>
+              remarkPlugins={[gfm]}
+              className={styles.markdownContent}
+              components={{
+                blockquote: BlockquoteComponent,
+                code: CodeComponent,
+              }}
+            >
+              {content}
+            </ReactMarkdown>
           </div>
         </div>
       </div>
@@ -63,11 +74,23 @@ export default function PostPage({
   );
 }
 
-const BlockquoteComponent = ({ children }) => {
+const BlockquoteComponent = ({ children }: { children: React.ReactNode }) => {
   return <blockquote className={styles.blockquote}>{children}</blockquote>;
 };
 
-const CodeComponent = ({ node, inline, className, children, ...props }) => {
+const CodeComponent = ({
+  node,
+  inline,
+  className,
+  children,
+  ...props
+}: {
+  node?: any;
+  inline?: boolean;
+  className?: string;
+  children: React.ReactNode;
+  props?: any;
+}) => {
   const match = /language-(\w+)/.exec(className || "");
   return !inline && match ? (
     <pre className={styles.code}>
@@ -82,7 +105,7 @@ const CodeComponent = ({ node, inline, className, children, ...props }) => {
   );
 };
 
-export async function getStaticPaths({ locales }) {
+export async function getStaticPaths({ locales }: { locales: string[] }) {
   const files = fs.readdirSync(path.join("posts"));
   const paths = files.flatMap((filename) => {
     return locales.map((locale) => {
