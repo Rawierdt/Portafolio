@@ -83,7 +83,7 @@ interface CodeComponentProps {
   node?: any; // Hacer la prop 'node' opcional
   inline?: boolean;
   className?: string; // Hacer la prop 'className' opcional
-  children: React.ReactNode;
+  children?: React.ReactNode; // Hacer la prop 'children' opcional
 }
 
 const CodeComponent: React.FC<CodeComponentProps> = ({
