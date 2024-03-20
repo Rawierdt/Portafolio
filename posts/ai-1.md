@@ -32,11 +32,7 @@ Tabla de datos~
 | Juan   | 25   | Ingeniero |
 | María  | 40   | Médica    |  
 
-¦
-
-¦¦
-
-¦
+Probando
 
 <h1>Hello World!</h1>  
 
