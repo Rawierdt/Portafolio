@@ -75,9 +75,14 @@ export default function PostPage({ frontmatter, content }: Props) {
   );
 }
 
-const BlockquoteComponent: React.FC = ({ children }) => {
+interface BlockquoteProps {
+  children?: React.ReactNode;
+}
+
+const BlockquoteComponent: React.FC<BlockquoteProps> = ({ children }) => {
   return <blockquote className={styles.blockquote}>{children}</blockquote>;
 };
+
 
 interface CodeComponentProps {
   node?: any; // Hacer la prop 'node' opcional
