@@ -91,14 +91,19 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
   inline,
   className,
   children,
+  ...props
 }) => {
-  if (inline) {
-    return <code className={className}>{children}</code>;
-  }
-  return (
-    <pre className={className}>
-      <code>{children}</code>
+  const match = /language-(\w+)/.exec(className || "");
+  return !inline && match ? (
+    <pre className={styles.code}>
+      <code className={`language-${match[1]}`} {...props}>
+        {String(children).replace(/\n$/, "")}
+      </code>
     </pre>
+  ) : (
+    <code className={className} {...props}>
+      {children}
+    </code>
   );
 };
 
