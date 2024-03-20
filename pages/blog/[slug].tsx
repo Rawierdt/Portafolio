@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
-import gfm from 'remark-gfm';
+import gfm from 'remark-gfm'; // Este es el plugin que necesitas
 import Link from "next/link";
 import Head from "next/head";
 import { config } from "../../config";
@@ -16,12 +16,12 @@ interface Frontmatter {
   excerpt: string;
 }
 
-interface PostProps {
+interface Props {
   frontmatter: Frontmatter;
   content: string;
 }
 
-export default function PostPage({ frontmatter, content }: PostProps) {
+export default function PostPage({ frontmatter, content }: Props) {
   const { title, date, cover_image, alt, excerpt } = frontmatter;
 
   return (
@@ -57,8 +57,9 @@ export default function PostPage({ frontmatter, content }: PostProps) {
             <img src={cover_image} alt={alt} />
           </div>
           <div className={`py-3 mt-3 text-base ${styles.markdownContent}`}>
+            {/* Procesa el contenido Markdown */}
             <ReactMarkdown
-              remarkPlugins={[gfm]}
+              remarkPlugins={[gfm]} // Añade el plugin aquí
               className={styles.markdownContent}
               components={{
                 blockquote: BlockquoteComponent,
@@ -74,22 +75,23 @@ export default function PostPage({ frontmatter, content }: PostProps) {
   );
 }
 
-const BlockquoteComponent = ({ children }: { children: React.ReactNode }) => {
+const BlockquoteComponent: React.FC = ({ children }) => {
   return <blockquote className={styles.blockquote}>{children}</blockquote>;
 };
 
-const CodeComponent = ({
+interface CodeComponentProps {
+  node: any;
+  inline: any;
+  className: any;
+  children: any;
+}
+
+const CodeComponent: React.FC<CodeComponentProps> = ({
   node,
   inline,
   className,
   children,
   ...props
-}: {
-  node?: any;
-  inline?: boolean;
-  className?: string;
-  children: React.ReactNode;
-  props?: any;
 }) => {
   const match = /language-(\w+)/.exec(className || "");
   return !inline && match ? (
@@ -124,13 +126,13 @@ export async function getStaticPaths({ locales }: { locales: string[] }) {
   };
 }
 
-export async function getStaticProps({
-  params: { slug },
-}: {
+interface Params {
   params: { slug: string; locale: string };
-}) {
+}
+
+export async function getStaticProps({ params }: Params) {
   const markdownWithMeta = fs.readFileSync(
-    path.join("posts", slug + ".md"),
+    path.join("posts", params.slug + ".md"),
     "utf-8"
   );
 
@@ -139,7 +141,6 @@ export async function getStaticProps({
   return {
     props: {
       frontmatter,
-      slug,
       content,
     },
   };
