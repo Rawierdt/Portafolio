@@ -82,7 +82,7 @@ const BlockquoteComponent: React.FC = ({ children }) => {
 interface CodeComponentProps {
   node?: any; // Hacer la prop 'node' opcional
   inline?: boolean;
-  className: string;
+  className?: string; // Hacer la prop 'className' opcional
   children: React.ReactNode;
 }
 
