@@ -80,10 +80,10 @@ const BlockquoteComponent: React.FC = ({ children }) => {
 };
 
 interface CodeComponentProps {
-  node: any;
-  inline?: any; // Hacer la prop 'inline' opcional
-  className: any;
-  children: any;
+  node?: any; // Hacer la prop 'node' opcional
+  inline?: boolean;
+  className: string;
+  children: React.ReactNode;
 }
 
 const CodeComponent: React.FC<CodeComponentProps> = ({
@@ -91,19 +91,14 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
   inline,
   className,
   children,
-  ...props
 }) => {
-  const match = /language-(\w+)/.exec(className || "");
-  return !inline && match ? (
-    <pre className={styles.code}>
-      <code className={`language-${match[1]}`} {...props}>
-        {String(children).replace(/\n$/, "")}
-      </code>
+  if (inline) {
+    return <code className={className}>{children}</code>;
+  }
+  return (
+    <pre className={className}>
+      <code>{children}</code>
     </pre>
-  ) : (
-    <code className={className} {...props}>
-      {children}
-    </code>
   );
 };
 
