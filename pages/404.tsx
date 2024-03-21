@@ -1,12 +1,56 @@
-import type { NextPage } from 'next'
-import Link from 'next/link';
-import { ReactElement } from 'react'
-import React from "react";
+import { NextPage } from 'next';
+import { ReactElement, useRef, useState } from 'react';
 import useTranslation from "next-translate/useTranslation";
-import Head from 'next/head'
+import Head from 'next/head';
+import { FaHome } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const NotFound: NextPage = (): ReactElement => {
   const { t } = useTranslation("index");
+
+  const TARGET_TEXT = "Go back Home";
+  const CYCLES_PER_LETTER = 2;
+  const SHUFFLE_TIME = 50;
+
+  const CHARS = "!@#$%^&*():{};|,.<>/?";
+
+  const intervalRef = useRef<NodeJS.Timeout | null>(null); // Define intervalRef con tipo NodeJS.Timeout | null
+  const [text, setText] = useState(TARGET_TEXT);
+
+  const scramble = () => {
+    let pos = 0;
+
+    intervalRef.current = setInterval(() => {
+      const scrambled = TARGET_TEXT.split("")
+        .map((char, index) => {
+          if (pos / CYCLES_PER_LETTER > index) {
+            return char;
+          }
+
+          const randomCharIndex = Math.floor(Math.random() * CHARS.length);
+          const randomChar = CHARS[randomCharIndex];
+
+          return randomChar;
+        })
+        .join("");
+
+      setText(scrambled);
+      pos++;
+
+      if (pos >= TARGET_TEXT.length * CYCLES_PER_LETTER) {
+        stopScramble();
+      }
+    }, SHUFFLE_TIME);
+  };
+
+  const stopScramble = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null; // Restablece intervalRef a null después de limpiar el intervalo
+    }
+    setText(TARGET_TEXT);
+  };
+
   return (
     <>
     <noscript>
@@ -24,25 +68,59 @@ const NotFound: NextPage = (): ReactElement => {
         <meta property="og:title" content="Rawier - Not Found" />
         <meta property="og:url" content="https://Rawier.vercel.app" />
     </Head>
-    <div className="bg-fixed bg-center bg-no-repeat bg-cover bg-dvd">
-      <div className='not_found cursor-crosshair'>
-        {/* No consigo que se traduzca */}
-        <p className="flex justify-center">{t("404")}</p>
-        <br />
-        <div className="flex justify-around invert-0 hover:invert">
-          <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://media.tenor.com/BjMUorkapiIAAAAi/country-humans-countr-humans-mexico.gif" width="230" height="230"></img>
+    <div className="flex flex-col">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/59413d96e6f2e1c6837c7ecd/1592233649594-7UQA8NZSNXMZWX86FIWN/JB_Game_of_Life.gif"
+        loading="lazy"
+        draggable="false"
+        alt=""
+        className="object-cover w-full h-64 filter invert"
+      />
+      <br />
+      <div className="flex justify-center flex-1">
+        <div className="max-w-xl px-4 py-8 mx-auto text-center">
+          <h1 className="text-2xl font-bold tracking-tight sm:text-4xl">
+            We can't find that page.
+          </h1>
+
+          <p className="mt-4 text-gray-500">
+            Try searching again, or return home to start from the beginning.
+          </p>
+    <br />
+          <a href="/">
+          <motion.button
+            whileHover={{
+              scale: 1.025,
+            }}
+            whileTap={{
+              scale: 0.975,
+            }}
+            onMouseEnter={scramble}
+            onMouseLeave={stopScramble}
+            className="group relative overflow-hidden rounded-lg border-[1px] border-neutral-500 bg-black px-4 py-2 font-mono font-medium uppercase text-neutral-300 transition-colors hover:text-indigo-300 leading-tight shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg duration-150 ease-in-out dark:bg-purple-600"
+          >
+            <div className="relative z-10 flex items-center gap-2">
+              <FaHome />
+              <span>{text}</span>
+            </div>
+            <motion.span
+              initial={{
+                y: "100%",
+              }}
+              animate={{
+                y: "-100%",
+              }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "mirror",
+                duration: 1,
+                ease: "linear",
+              }}
+              className="duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-indigo-400/0 from-40% via-indigo-400/100 to-indigo-400/0 to-60% opacity-0 transition-opacity group-hover:opacity-100"
+            />
+          </motion.button>
+          </a>  
         </div>
-        <br />
-        <h1 className="flex justify-center text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">Ooops...</h1>
-        <p className="flex justify-center font-bold text-black-900 dark:text-white">Don't look for it anymore, it no longer exists...</p>
-        <p className="flex justify-center text-black-900 dark:text-white">Don't worry here are some of my favorite songs 𝕽♛</p>
-        <br />
-        <p className="flex justify-center">Regresar a &nbsp;<Link href="/"><a className='font-bold text-purple-500 dark:text-pink'>Home</a></Link></p>
-        <br />
-        <div className="flex items-center justify-center">
-          <iframe src="https://open.spotify.com/embed/playlist/4NGPAH2dKTGhB1THujjgii?utm_source=generator" width="70%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        <br />
       </div>
     </div>
     </>

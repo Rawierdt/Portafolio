@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'dvd': "url('https://wallpaperaccess.com/full/869923.gif')",
+        'tv': "url('https://i.makeagif.com/media/4-05-2022/22uZbY.gif')",
       },
     },
   },
