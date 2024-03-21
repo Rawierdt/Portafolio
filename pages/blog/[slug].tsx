@@ -37,7 +37,9 @@ export default function PostPage({ frontmatter, content }: Props) {
         <meta name="description" content={excerpt} />
         <meta property="og:description" content={excerpt} />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="https://Rawier.vercel.app" />
+        <meta property="og:url" content="https://rawier.vercel.app" />
+        <meta property="og:image" content={cover_image}/>
+        <meta property="article:published_time" content={date} />
       </Head>
       <div className="container mx-auto">
         <div className="flex justify-start text-center">
@@ -55,6 +57,7 @@ export default function PostPage({ frontmatter, content }: Props) {
         <div>
           <div className="text-center">
             <h1 className="text-3xl">{title}</h1>
+            <div className="text-xl">{excerpt}</div>
             <div className="text-xl">{date}</div>
             <img src={cover_image} alt={alt} />
           </div>

@@ -30,8 +30,9 @@ export interface PostType {
 }
 
 export interface PostsType {
-  posts: IPost;
+  posts: IPost[];
 }
+
 
 export type IconsType = {
   text: string;

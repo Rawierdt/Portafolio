@@ -70,23 +70,22 @@ const NotFound: NextPage = (): ReactElement => {
     </Head>
     <div className="flex flex-col">
       <img
-        src="https://images.squarespace-cdn.com/content/v1/59413d96e6f2e1c6837c7ecd/1592233649594-7UQA8NZSNXMZWX86FIWN/JB_Game_of_Life.gif"
+        src="https://i.ibb.co/PtTThks/lis.gif"
         loading="lazy"
         draggable="false"
-        alt=""
-        className="object-cover w-full h-64 filter invert"
+        alt="Life Is Strange"
+        className="object-cover w-full h-64 filter blur-sm"
       />
       <br />
       <div className="flex justify-center flex-1">
         <div className="max-w-xl px-4 py-8 mx-auto text-center">
-          <h1 className="text-2xl font-bold tracking-tight sm:text-4xl">
-            We can't find that page.
-          </h1>
-
-          <p className="mt-4 text-gray-500">
-            Try searching again, or return home to start from the beginning.
-          </p>
-    <br />
+        <h1 className="text-2xl font-bold tracking-tight sm:text-4xl">
+          Time bends, but this page remains lost.
+        </h1>
+        <p className="mt-4 text-gray-500">
+          Rewind your search, or journey back home to the beginning.
+        </p>
+      <br />
           <a href="/">
           <motion.button
             whileHover={{
