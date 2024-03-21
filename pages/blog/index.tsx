@@ -37,7 +37,7 @@ export default function Blog({ posts }: PostsType) {
           content="Blog section - Here I have all the blog posts I had written in the past"
         />
         <meta property="og:title" content="Rawier - Blog" />
-        <meta property="og:url" content="https://Rawier.vercel.app" />
+        <meta property="og:url" content="https://rawier.vercel.app" />
       </Head>
       <div className="container px-4 mx-auto my-12 md:px-12">
         <div className="flex flex-wrap -mx-1 lg:-mx-4">
@@ -54,14 +54,14 @@ export default function Blog({ posts }: PostsType) {
             <svg className="inline-block w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m14 8-4 4 4 4"/>
             </svg>
-            <span className="inline-block">Anterior</span>
+            <span className="inline-block">Previous</span>
           </button>
           <button
             onClick={() => paginate(currentPage + 1)}
             disabled={indexOfLastPost >= posts.length}
             className="inline-block px-4 py-2 text-xs font-bold leading-tight text-white uppercase transition duration-150 ease-in-out bg-black rounded rounded-r shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-700 active:shadow-lg dark:bg-purple-600 dark:hover:bg-purple-700 dark:active:bg-purple-800 dark:focus:bg-purple-700"
           >
-            <span className="inline-block">Siguiente</span>
+            <span className="inline-block">Next</span>
             <svg className="inline-block w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m10 16 4-4-4-4"/>
             </svg>

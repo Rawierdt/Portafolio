@@ -33,13 +33,13 @@ export default function PostPage({ frontmatter, content }: Props) {
           type="image/jpg"
           href="../Rawier-icon.png"
         />
-        <meta property="og:image" content={config.github.url} />
         <meta name="description" content={excerpt} />
+        <meta property="og:site_name" content="Rawier Cybersecurity"/>
+        <meta property="og:type" content="article" />
         <meta property="og:description" content={excerpt} />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="https://rawier.vercel.app" />
         <meta property="og:image" content={cover_image}/>
-        <meta property="article:published_time" content={date} />
       </Head>
       <div className="container mx-auto">
         <div className="flex justify-start text-center">

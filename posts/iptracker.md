@@ -2,7 +2,7 @@
 title: "[EN] Tracker IP"
 excerpt: "[EN]  Tracker IP Sobre sitios web y mas"
 date: "Dec 21 2022"
-cover_image: "/blog/iptracker.webp"
+cover_image: "/blog/tiptracker.webp"
 alt: "entities"
 ---
 

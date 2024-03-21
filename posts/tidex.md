@@ -2,7 +2,7 @@
 title: "[EN] Tidex Ransomware"
 excerpt: "[EN] Ransomware Tidex for Linux"
 date: "Jan 30 2023"
-cover_image: "/blog/tidex.webp"
+cover_image: "/blog/rtidex.webp"
 ---
 
 # Tidex

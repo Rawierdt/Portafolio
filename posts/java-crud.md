@@ -2,7 +2,7 @@
 title: "[ES] Java CRUD"
 excerpt: "[ES] java CRUD"
 date: "Dec 28 2021"
-cover_image: "/blog/Jcrud.webp"
+cover_image: "/blog/JavaCrud.webp"
 alt: "Java"
 ---
 
