@@ -2,7 +2,7 @@
 title: "[ES] Herramientas OSINT 1"
 excerpt: "[ES] Exploraremos una lista de herramientas para OSINT"
 date: "Sep 18 2023"
-cover_image: "/blog/osint-1.gif"
+cover_image: "/blog/osint1.webp"
 alt: "OSINT 1"
 ---
 

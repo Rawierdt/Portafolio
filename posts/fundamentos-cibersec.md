@@ -2,10 +2,13 @@
 title: "[ES] Fundamentos Ciberseguridad 1"
 excerpt: "[ES] Some interesting terms in cybersecurity"
 date: "Nov 08 2022"
-cover_image: "/blog/fundamentos-cibersec.webp"
+cover_image: "/blog/cibersec.webp"
 ---
 
-# Acontinuación veremos algunos terminos fundamentales para entender esta hermosa rama de la informática
+# Acontinuación veremos algunos terminos fundamentales para entender esta hermosa rama de la informática.
+
+&nbsp;
+
 Te recomiendo ir al Cheatsheet para una versión mas dinamica y divertida de aprender estos terminos.
 [Click para encontrar el Cheatsheet Completo](https://rawier.gitbook.io/glosario-de-hacking-ciberseguridad-y-redes/)
 

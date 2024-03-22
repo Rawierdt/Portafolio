@@ -2,13 +2,14 @@
 title: "[EN] Spotify Clon for Diana Sessions"
 excerpt: "[ES] Music aplication (electron), for Diana Sessions from Riot Games Music"
 date: "Aug 14 2022"
-cover_image: "/blog/chilltify.webp"
+cover_image: "/blog/dianasessions.webp"
 alt: "entities"
 ---
 
 ![Captura](https://raw.githubusercontent.com/Rawierdt/Chilltify/main/Screenshots/Index.png)
 
 # Installation
+
 * The complete guide can be found at [GitHub](https://github.com/Rawierdt/Chilltify)
 
 <h1 align="center">🌜 Lofi Music - Diana Sessions 🌛</h1>
@@ -25,7 +26,6 @@ alt: "entities"
   Lofi music application made in electron, based on "Diana Sessions" from Riot Games Music.
 
 > This project was made for educational purposes only, and the music originally comes from [Riot Games Music](https://www.youtube.com/c/riotgamesmusic)
-
 
 # Download
 
