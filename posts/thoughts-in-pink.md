@@ -23,7 +23,7 @@ From the sequence:
 Find the sequence after n + 5:
 
 ```javascript
-0, 0, 0, 0, 0, 1, 1, 1, 3, 4, 5, 7, 9, 12, 18, 22, 25, 36, 46, 48, 62, 76, 88, 107, 126, 142, 179, 198, 216, 257, 304, 329, 382, 431, 483, 547, 601, 643, 764, 838, 889, 998, 1134, 1197, 1324, 1435, 1574, 1751, 1874, 1963, 2247, 2419, 2511, 2735, 3041, 3187, 3453 
+0, 0, 0, 0, 0, 1, 1, 1, 3, 4, 5, 7, 9, 12, 18, 22, 25, 36, 46, 48, 62, 76, 88, 107, 126, 142, 179, 198, 216, 257, 304, 329, 382, 431, 483, 547, 601, 643, 764, 838, 889, 998, 1134,
 
 ```
 
@@ -119,17 +119,12 @@ RESULT= J
 
 > X = Mathematical operation that consists of reducing or separating something from a whole.
 > Y = 62 / 62
+> G = 
 
 &nbsp;
 
-*Ha{Y}nLkJFyEwdx9PKAv{X}swED4wt{Y}ELgTEp{RESULT}*
+*Ha{Y}nLkJFy{G}x9PKAv{X}swED4wt{Y}ELgTEp{RESULT}*
 
 &nbsp;
 
 ## [IS THIS PINK?](https://mega.nz/file/JjFASRTB)
-
-### Referencias
-
-* 🔹  Bird, J. J., & Lotfi, A. (2023). Real-time Detection of AI-Generated Speech for DeepFake Voice Conversion. arXiv preprint arXiv:2308.12734.
-* 🔹 Kamble, A., Tathe, A., Kumbharkar, S., Bhandare, A., & Mitra, A. C. (2023). Custom Data Augmentation for low resource ASR using Bark and Retrieval-Based Voice Conversion. arXiv preprint arXiv:2311.14836.
-* 🔹 Ralón, M. A. M. (2021). Robo de identidad y clonación de tarjetas de crédito y débito utilizando cajeros automáticos alterados. Revista Científica Diálogo Forense, 2(4).

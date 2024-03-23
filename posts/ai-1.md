@@ -38,12 +38,12 @@ La clonación de una voz necesita de cierto entrenamiento extenso para ser refin
 
 | Nombre | Url |
 | --|--|
-| Guia de entrenamiento RVC v2 | <https://docs.google.com/document/d/13ebnzmeEBc6uzYCMt-QVFQk-whVrK4zw8k7_Lw3Bv_A/edit#heading=h.bjzhhhcn3f69> |
-| Guia inferencia Covers con RVC | <https://docs.google.com/document/d/13_l1bd1Osgz7qlAZn-zhklCbHpVRk6bYOuAuB78qmsE/edit#heading=h.qjrl2d41vtmt> |
-| Pagina para la clonación | <https://colab.research.google.com/drive/1AcGvwT7yP_u9h_TJnDHoPUJKnCG1MejS?usp=sharing> |
-| Reputación de Url | <https://www.urlvoid.com> |
-| Whois | <https://whois.domaintools.com> |
-| SleepJar | <https://sleepjar.com> |
+| Guia de entrenamiento RVC v2 | [Click](https://docs.google.com/document/d/13ebnzmeEBc6uzYCMt-QVFQk-whVrK4zw8k7_Lw3Bv_A/edit#heading=h.bjzhhhcn3f6) |
+| Guia inferencia Covers con RVC | [Click](https://docs.google.com/document/d/13_l1bd1Osgz7qlAZn-zhklCbHpVRk6bYOuAuB78qmsE/edit#heading=h.qjrl2d41vtmt) |
+| Pagina para la clonación | [Click](https://colab.research.google.com/drive/1AcGvwT7yP_u9h_TJnDHoPUJKnCG1MejS?usp=sharing) |
+| Reputación de Url | [Click](https://www.urlvoid.com) |
+| Whois | [Click](https://whois.domaintools.com) |
+| SleepJar | [Click](https://sleepjar.com) |
 
 ---
 
@@ -104,3 +104,7 @@ Las grandes entidades tienen control de estos datos por lo tanto esto seria lo p
 * 📌 **Singularidad** = Se denomina como tal a aquella identidad autonoma en si misma capaz de crear, replicar y destruir cualquier cosa por si misma, vease como una inteligencia artificial capaz de autoprogramarse (También conocida como Basilisco de Roko).
 * 📌 **Modelo** = Se define como un aconjunto de algoritmos entrenados para ejecutar de manera especializada una sola tarea, sea dibujar, cantar o copiar, existen modelos capaces de hacer tareas simultaneas.
 * 📌 **Algoritmo** = Conjunto de pasos para completar una tarea con exito.
+
+&nbsp;
+
+= Ewd
