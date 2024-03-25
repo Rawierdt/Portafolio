@@ -31,7 +31,7 @@ Un framework es un marco de como hacer las cosas y una normativa es como hacerlo
 
 ---
 
-**¿Qúe son las pruebas de inrusión?**: Las pruebas de intrusión son una práctica de seguridad que consta de un conjunto de técnicas que permiten evaluar el nivel de seguridad tecnológico de una organización o servicio brindado.
+**¿Qúe son las pruebas de intrusión?**: Las pruebas de intrusión son una práctica de seguridad que consta de un conjunto de técnicas que permiten evaluar el nivel de seguridad tecnológico de una organización o servicio brindado.
 
 &nbsp;
 
