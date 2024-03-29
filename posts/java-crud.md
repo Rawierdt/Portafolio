@@ -33,6 +33,7 @@ alt: "Java"
 <br>
 
 >>Database:
+```sql
 Name: dbcalificaciones,   `NumeroLista` int(11) NOT NULL,
   `Nombre` varchar(50) NOT NULL,
   `ApellidoPaterno` varchar(50) NOT NULL,
@@ -46,12 +47,18 @@ Name: dbcalificaciones,   `NumeroLista` int(11) NOT NULL,
   `PromedioR` int(11) NOT NULL,
   `Secuencia` varchar(20) NOT NULL,
   `NoEquipo` int(11) NOT NULL.
+```
+
+&nbsp;
 
   and
-
+```sql
 >>`id` int(11) NOT NULL,
   `user` varchar(45) NOT NULL,
   `password` varchar(255) NOT NULL  
+```
+
+&nbsp;
 
 user: admin@root.com password: root
 <br>

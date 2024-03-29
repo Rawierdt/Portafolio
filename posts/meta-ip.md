@@ -19,7 +19,7 @@ cover_image: "/blog/metacrawler.webp"
 
 Code Example for Metacrawler
 
-```
+```python
 # Se eliminan los metadatos
 def remove_exif():
     global image_path
@@ -50,7 +50,7 @@ Code Example for IPTrack
 ## Here is IPTracker
 ![IMG](https://i.ibb.co/tbTMP0g/IPTracker.png)
 
-```
+```python
 # Verificar si la dirección IP es maliciosa utilizando la API de VirusTotal
 def is_malicious(ip, api_key):
     url = f'https://www.virustotal.com/api/v3/ip_addresses/{ip}'

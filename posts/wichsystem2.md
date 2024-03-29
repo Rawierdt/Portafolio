@@ -11,7 +11,7 @@ alt: "wichsystem"
 *El codigo completo se encuentra en [GitHub](https://github.com/Rawierdt/W1chsystem)*
 
 
-``
+```python
 #!/usr/bin/python3
 #coding: utf-8
 
@@ -69,6 +69,4 @@ def get_os(ttl):
 		
 	else:
 		return "Not Found"
-
-...
-``
+```
