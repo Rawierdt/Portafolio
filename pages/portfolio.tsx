@@ -32,7 +32,7 @@ const Portfolio: NextPage = (): ReactElement => {
       </div>
       <br />
       <h1 className="flex justify-center text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">PROJECTS</h1>
-      <p className="flex justify-center font-bold text-black-900 dark:text-white"><em>Here are some of my most recent projects and contributions.</em></p>
+      <p className="flex justify-center text-center font-bold text-black-900 dark:text-white">Here are some of my most recent projects and contributions.</p>
       <br />
       <br />
 
@@ -49,7 +49,7 @@ const Portfolio: NextPage = (): ReactElement => {
           <svg className="inline-block w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M8.64 4.737A7.97 7.97 0 0 1 12 4a7.997 7.997 0 0 1 6.933 4.006h-.738c-.65 0-1.177.25-1.177.9 0 .33 0 2.04-2.026 2.008-1.972 0-1.972-1.732-1.972-2.008 0-1.429-.787-1.65-1.752-1.923-.374-.105-.774-.218-1.166-.411-1.004-.497-1.347-1.183-1.461-1.835ZM6 4a10.06 10.06 0 0 0-2.812 3.27A9.956 9.956 0 0 0 2 12c0 5.289 4.106 9.619 9.304 9.976l.054.004a10.12 10.12 0 0 0 1.155.007h.002a10.024 10.024 0 0 0 1.5-.19 9.925 9.925 0 0 0 2.259-.754 10.041 10.041 0 0 0 4.987-5.263A9.917 9.917 0 0 0 22 12a10.025 10.025 0 0 0-.315-2.5A10.001 10.001 0 0 0 12 2a9.964 9.964 0 0 0-6 2Zm13.372 11.113a2.575 2.575 0 0 0-.75-.112h-.217A3.405 3.405 0 0 0 15 18.405v1.014a8.027 8.027 0 0 0 4.372-4.307ZM12.114 20H12A8 8 0 0 1 5.1 7.95c.95.541 1.421 1.537 1.835 2.415.209.441.403.853.637 1.162.54.712 1.063 1.019 1.591 1.328.52.305 1.047.613 1.6 1.316 1.44 1.825 1.419 4.366 1.35 5.828Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">Project Title</span>
+          <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">Project Title</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -68,9 +68,9 @@ const Portfolio: NextPage = (): ReactElement => {
           <p className="text-xs text-yellow-500">
           Undefined
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Read More
-          </button>
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://example.com', '_blank')} className="bg-green-900 text-green-400 border border-green-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-green-400 shadow-green-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Read More</button>
         </div>
       </div>
     </div>
@@ -85,7 +85,7 @@ const Portfolio: NextPage = (): ReactElement => {
           <svg className="inline-block w-6 h-6 text-gray-800 align-middle dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">Rawier's Portfolio</span>
+          <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">Rawier's Portfolio</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -104,9 +104,9 @@ const Portfolio: NextPage = (): ReactElement => {
           <p className="text-xs text-yellow-500">
             Mar 28, 2024
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Read More
-          </button>
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app', '_blank')} className="bg-green-900 text-green-400 border border-green-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-green-400 shadow-green-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Read More</button>
         </div>
       </div>
     </div>
@@ -121,7 +121,7 @@ const Portfolio: NextPage = (): ReactElement => {
           <svg className="inline-block w-6 h-6 text-gray-800 align-middle dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">Metacrawler 2</span>
+          <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">Metacrawler 2</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -140,9 +140,9 @@ const Portfolio: NextPage = (): ReactElement => {
           <p className="text-xs text-yellow-500">
             Mar 27, 2024
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/metacrawler', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Read More
-          </button>
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/metacrawler', '_blank')} className="bg-green-900 text-green-400 border border-green-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-green-400 shadow-green-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Read More</button>
         </div>
       </div>
     </div>
@@ -162,7 +162,7 @@ const Portfolio: NextPage = (): ReactElement => {
           <svg className="inline-block w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M8.64 4.737A7.97 7.97 0 0 1 12 4a7.997 7.997 0 0 1 6.933 4.006h-.738c-.65 0-1.177.25-1.177.9 0 .33 0 2.04-2.026 2.008-1.972 0-1.972-1.732-1.972-2.008 0-1.429-.787-1.65-1.752-1.923-.374-.105-.774-.218-1.166-.411-1.004-.497-1.347-1.183-1.461-1.835ZM6 4a10.06 10.06 0 0 0-2.812 3.27A9.956 9.956 0 0 0 2 12c0 5.289 4.106 9.619 9.304 9.976l.054.004a10.12 10.12 0 0 0 1.155.007h.002a10.024 10.024 0 0 0 1.5-.19 9.925 9.925 0 0 0 2.259-.754 10.041 10.041 0 0 0 4.987-5.263A9.917 9.917 0 0 0 22 12a10.025 10.025 0 0 0-.315-2.5A10.001 10.001 0 0 0 12 2a9.964 9.964 0 0 0-6 2Zm13.372 11.113a2.575 2.575 0 0 0-.75-.112h-.217A3.405 3.405 0 0 0 15 18.405v1.014a8.027 8.027 0 0 0 4.372-4.307ZM12.114 20H12A8 8 0 0 1 5.1 7.95c.95.541 1.421 1.537 1.835 2.415.209.441.403.853.637 1.162.54.712 1.063 1.019 1.591 1.328.52.305 1.047.613 1.6 1.316 1.44 1.825 1.419 4.366 1.35 5.828Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">NexDrak - Artist Landing Page</span>
+          <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">NexDrak - Artist Landing Page</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -181,9 +181,9 @@ const Portfolio: NextPage = (): ReactElement => {
           <p className="text-xs text-yellow-500">
             Ago 18, 2023
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://nexdrak.surge.sh', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Read More
-          </button>
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://nexdrak.surge.sh', '_blank')} className="bg-teal-900 text-teal-400 border border-teal-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-teal-400 shadow-teal-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Read More</button>
         </div>
       </div>
     </div>
@@ -198,7 +198,7 @@ const Portfolio: NextPage = (): ReactElement => {
           <svg className="inline-block w-6 h-6 text-gray-800 align-middle dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">Tidex Ransomware</span>
+          <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">Tidex Ransomware</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -217,9 +217,9 @@ const Portfolio: NextPage = (): ReactElement => {
           <p className="text-xs text-yellow-500">
             Jan 30, 2023
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/tidex', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Read More
-          </button>
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/tidex', '_blank')} className="bg-teal-900 text-teal-400 border border-teal-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-teal-400 shadow-teal-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Read More</button>
         </div>
       </div>
     </div>
@@ -234,7 +234,7 @@ const Portfolio: NextPage = (): ReactElement => {
           <svg className="inline-block w-6 h-6 text-gray-800 align-middle dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">Alo Polisia Community</span>
+          <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">Alo Polisia Community</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -253,9 +253,9 @@ const Portfolio: NextPage = (): ReactElement => {
           <p className="text-xs text-yellow-500">
             Undefined
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/404', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Read More
-          </button>
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/404', '_blank')} className="bg-teal-900 text-teal-400 border border-teal-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-teal-400 shadow-teal-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Read More</button>
         </div>
       </div>
     </div>
@@ -275,7 +275,7 @@ const Portfolio: NextPage = (): ReactElement => {
           <svg className="inline-block w-6 h-6 text-gray-800 align-middle dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">SisLog</span>
+          <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">SisLog</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -294,9 +294,9 @@ const Portfolio: NextPage = (): ReactElement => {
           <p className="text-xs text-yellow-500">
             Apr 30, 2023
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://github.com/Rawierdt/Sislog', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Read More
-          </button>
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://github.com/Rawierdt/Sislog', '_blank')} className="bg-blue-900 text-blue-400 border border-blue-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-blue-400 shadow-blue-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Read More</button>
         </div>
       </div>
     </div>
@@ -311,7 +311,7 @@ const Portfolio: NextPage = (): ReactElement => {
           <svg className="inline-block w-6 h-6 text-gray-800 align-middle dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">Metacrawler && IPTracker</span>
+          <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">Metacrawler && IPTracker</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -330,9 +330,9 @@ const Portfolio: NextPage = (): ReactElement => {
           <p className="text-xs text-yellow-500">
             Apr 23, 2023
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/meta-ip', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Read More
-          </button>
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/meta-ip', '_blank')} className="bg-blue-900 text-blue-400 border border-blue-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-blue-400 shadow-blue-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Read More</button>
         </div>
       </div>
     </div>
@@ -347,7 +347,7 @@ const Portfolio: NextPage = (): ReactElement => {
           <svg className="inline-block w-6 h-6 text-gray-800 align-middle dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">Espejito, Espejito...</span>
+          <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">Espejito, Espejito...</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -366,9 +366,9 @@ const Portfolio: NextPage = (): ReactElement => {
           <p className="text-xs text-yellow-500">
             Dec 28, 2021
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawierdt.github.io/espejito/', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Read More
-          </button>
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawierdt.github.io/espejito/', '_blank')} className="bg-blue-900 text-blue-400 border border-blue-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-blue-400 shadow-blue-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Read More</button>
         </div>
       </div>
     </div>
@@ -388,7 +388,7 @@ const Portfolio: NextPage = (): ReactElement => {
           <svg className="inline-block w-6 h-6 text-gray-800 align-middle dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">Cler Multiprospose Discord Bot</span>
+          <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">Cler Multiprospose Discord Bot</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -407,9 +407,9 @@ const Portfolio: NextPage = (): ReactElement => {
           <p className="text-xs text-yellow-500">
             Undefined
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/cler10', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Read More
-          </button>
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/cler10', '_blank')} className="bg-violet-900 text-violet-400 border border-violet-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-violet-400 shadow-violet-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Read More</button>
         </div>
       </div>
     </div>
@@ -424,7 +424,7 @@ const Portfolio: NextPage = (): ReactElement => {
           <svg className="inline-block w-6 h-6 text-gray-800 align-middle dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">Chilltify (Spotify Clone)</span>
+          <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">Chilltify (Spotify Clone)</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -443,9 +443,9 @@ const Portfolio: NextPage = (): ReactElement => {
           <p className="text-xs text-yellow-500">
             Undefined
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/chilltify', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Read More
-          </button>
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/chilltify', '_blank')} className="bg-violet-900 text-violet-400 border border-violet-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-violet-400 shadow-violet-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Read More</button>
         </div>
       </div>
     </div>
@@ -460,7 +460,7 @@ const Portfolio: NextPage = (): ReactElement => {
           <svg className="inline-block w-6 h-6 text-gray-800 align-middle dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">JAVA CRUD Alumnos</span>
+          <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">JAVA CRUD Alumnos</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -479,9 +479,9 @@ const Portfolio: NextPage = (): ReactElement => {
           <p className="text-xs text-yellow-500">
             Undefined
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/java-crud', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Read More
-          </button>
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/java-crud', '_blank')} className="bg-violet-900 text-violet-400 border border-violet-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-violet-400 shadow-violet-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Read More</button>
         </div>
       </div>
     </div>

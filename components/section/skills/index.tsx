@@ -5,17 +5,10 @@ import {
   SiReact,
   SiNextdotjs,
   SiNodedotjs,
-  SiExpress,
-  SiMongodb,
-  SiPostgresql,
-  SiDocker,
   SiVercel,
   SiLinux,
-  SiDigitalocean,
   SiGnubash,
   SiPython,
-  SiCplusplus,
-  SiElectron,
   SiMysql,
   SiKalilinux,
   SiMicrosoftazure,
@@ -24,17 +17,15 @@ import {
   SiLinkedin,
   SiTwitter,
   SiDiscord,
-  SiHackthebox,
   SiJavascript,
   SiJava,
   SiMicrosoftsqlserver,
   SiCisco,
   SiFigma,
-  SiSpring,
   SiPhp,
-  SiWindowsterminal,
-  SiVim,
   SiMicrosoft,
+  SiGit,
+  SiSqlite,
 } from "react-icons/si";
 import useTranslation from "next-translate/useTranslation";
 import { ReactElement } from "react";
@@ -69,7 +60,7 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
           <SkillsIcon text="Javascript" children={<SiJavascript />} />,
           <SkillsIcon text="Python" children={<SiPython />} />,
-          // <SkillsIcon text="Java" children={<SiJava />} />,
+          <SkillsIcon text="Java" children={<SiJava />} />,
           // <SkillsIcon text="C++" children={<SiCplusplus />} />,
         ]}
         />
@@ -87,6 +78,7 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
             <SkillsIcon text="Nodejs" children={<SiNodedotjs />} />,
             <SkillsIcon text="PHP" children={<SiPhp />} />,
+            <SkillsIcon text="SQL" children={<SiSqlite />} />,
           ]}
         />
         <Box
@@ -103,7 +95,7 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
             <SkillsIcon text="Kali Linux" children={<SiKalilinux />} />,
             // <SkillsIcon text="Docker" children={<SiDocker />} />,
-            <SkillsIcon text="Vim" children={<SiVim />} />,
+            <SkillsIcon text="Git" children={<SiGit />} />,
             <SkillsIcon text="Bash" children={<SiGnubash />} />,
           ]}
         />
