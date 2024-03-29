@@ -37,6 +37,7 @@ const Portfolio: NextPage = (): ReactElement => {
       <br />
 
 {/* Aqui comienzan los proyectos mostrados en tablas */}
+
 <div className="flex flex-wrap justify-center gap-6">
   {/* Primer elemento */}
     <div className="w-full lg:w-[30%] max-w-[400px] mx-2 mb-4 lg:mb-0">
@@ -65,9 +66,9 @@ const Portfolio: NextPage = (): ReactElement => {
         </p>
         <div className="flex justify-between mt-4">
           <p className="text-xs text-yellow-500">
-            Ago 18, 2023
+          Undefined
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://nexdrak.surge.sh', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
             Read More
           </button>
         </div>
@@ -97,7 +98,7 @@ const Portfolio: NextPage = (): ReactElement => {
           This is my portfolio.
         </p>
         <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-          This is my portfolio, it was written in Typescript with Tailwind using Nextjs framework, this portfolio is constantly updated. I hope you like it 🔥, if you have any questions feel free to ask me or contact me on my networks
+          This is my portfolio, it was written in Typescript with Tailwind using Nextjs framework, this portfolio is constantly updated. I hope you like it 🔥, if you have any questions feel free to ask me or contact.
         </p>
         <div className="flex justify-between mt-4">
           <p className="text-xs text-yellow-500">
