@@ -7,6 +7,22 @@ import Link from "next/link";
 import Head from "next/head";
 import { config } from "../../config";
 import styles from "./post.module.css";
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import sql from 'react-syntax-highlighter/dist/cjs/languages/prism/sql';
+import c from 'react-syntax-highlighter/dist/cjs/languages/prism/c';
+import java from 'react-syntax-highlighter/dist/cjs/languages/prism/java';
+import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml';
+import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import python from 'react-syntax-highlighter/dist/cjs/languages/prism/python';
+
+// Registra el lenguaje Python
+SyntaxHighlighter.registerLanguage('python', python);
+SyntaxHighlighter.registerLanguage('sql', sql);
+SyntaxHighlighter.registerLanguage('c', c);
+SyntaxHighlighter.registerLanguage('java', java);
+SyntaxHighlighter.registerLanguage('yaml', yaml);
+
+
 
 interface Frontmatter {
   title: string;
@@ -105,17 +121,17 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
 }) => {
   const match = /language-(\w+)/.exec(className || "");
   return !inline && match ? (
-    <pre className={styles.code}>
-      <code className={`language-${match[1]}`} {...props}>
-        {String(children).replace(/\n$/, "")}
-      </code>
-    </pre>
+    <SyntaxHighlighter language={match[1]} style={okaidia}>
+      {String(children)}
+    </SyntaxHighlighter>
   ) : (
     <code className={className} {...props}>
       {children}
     </code>
   );
 };
+
+
 
 export async function getStaticPaths({ locales }: { locales: string[] }) {
   const files = fs.readdirSync(path.join("posts"));
