@@ -1,8 +1,8 @@
 # 🇳 Portafolio 2022 - Nextjs + Tailwind + Vercel
 
-![Portafolio](https://i.ibb.co/hWmrZ2t/scrernportafolio.jpg)
+![Portafolio](https://i.ibb.co/bKNbrtP/portfolio.png)
 
-## 🏃‍♂️ Run the project
+## How to 🏃‍♂️ Run the project
 
 ### Clone the project
 
@@ -42,4 +42,4 @@ yarn dev
 
 # 𝕽♛
 
-[↼ Back to Rawier](https://Rawier.vercel.app)
+[↼ Back to Rawier](https://rawier.vercel.app)

@@ -35,19 +35,20 @@ const Portfolio: NextPage = (): ReactElement => {
       <p className="flex justify-center font-bold text-black-900 dark:text-white"><em>Here are some of my most recent projects and contributions.</em></p>
       <br />
       <br />
+
 {/* Aqui comienzan los proyectos mostrados en tablas */}
 <div className="flex flex-wrap justify-center gap-6">
   {/* Primer elemento */}
     <div className="w-full lg:w-[30%] max-w-[400px] mx-2 mb-4 lg:mb-0">
     <div className="overflow-hidden bg-gray-100 border-2 rounded-lg shadow-lg cursor-pointer dark:bg-gray-800 dark:hover:border-violet-800 hover:border-yellow-500">
-    <img className="object-cover w-full h-60 md:h-72 relative overflow-hidden" style={{ width: '400px', height: 'auto' }} loading="lazy" src="https://i.ibb.co/f16Mt2R/rawierID.gif" alt="People working together at a desk" />
+    <img className="object-cover w-full h-60 md:h-72 relative overflow-hidden" style={{ width: '400px', height: 'auto' }} loading="lazy" src="https://i.ibb.co/RTHxZKs/rawierd.png" alt="People working together at a desk" />
       <div className="p-4">
       <div>
         <a href="example.com" target="_blank" rel="noopener noreferrer" className="inline-block">
           <svg className="inline-block w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M8.64 4.737A7.97 7.97 0 0 1 12 4a7.997 7.997 0 0 1 6.933 4.006h-.738c-.65 0-1.177.25-1.177.9 0 .33 0 2.04-2.026 2.008-1.972 0-1.972-1.732-1.972-2.008 0-1.429-.787-1.65-1.752-1.923-.374-.105-.774-.218-1.166-.411-1.004-.497-1.347-1.183-1.461-1.835ZM6 4a10.06 10.06 0 0 0-2.812 3.27A9.956 9.956 0 0 0 2 12c0 5.289 4.106 9.619 9.304 9.976l.054.004a10.12 10.12 0 0 0 1.155.007h.002a10.024 10.024 0 0 0 1.5-.19 9.925 9.925 0 0 0 2.259-.754 10.041 10.041 0 0 0 4.987-5.263A9.917 9.917 0 0 0 22 12a10.025 10.025 0 0 0-.315-2.5A10.001 10.001 0 0 0 12 2a9.964 9.964 0 0 0-6 2Zm13.372 11.113a2.575 2.575 0 0 0-.75-.112h-.217A3.405 3.405 0 0 0 15 18.405v1.014a8.027 8.027 0 0 0 4.372-4.307ZM12.114 20H12A8 8 0 0 1 5.1 7.95c.95.541 1.421 1.537 1.835 2.415.209.441.403.853.637 1.162.54.712 1.063 1.019 1.591 1.328.52.305 1.047.613 1.6 1.316 1.44 1.825 1.419 4.366 1.35 5.828Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">NexDrak - Artist Landing Page</span>
+          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">Project Title</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
@@ -57,10 +58,10 @@ const Portfolio: NextPage = (): ReactElement => {
             🔵 CODE
         </span>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-          An artist landing page for NexDrak.
+          Sample.
         </p>
         <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-        In there you can find information about his works. Project made in React, hosting on Surge, the project is still in development but you can check it out for now, the link is below.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
         </p>
         <div className="flex justify-between mt-4">
           <p className="text-xs text-yellow-500">
@@ -76,33 +77,33 @@ const Portfolio: NextPage = (): ReactElement => {
   {/* Segundo elemento */}
   <div className="w-full lg:w-[30%] max-w-[400px] mx-2 mb-4 lg:mb-0 ">
     <div className="overflow-hidden bg-gray-100 border-2 rounded-lg shadow-lg cursor-pointer dark:bg-gray-800 dark:hover:border-violet-800 hover:border-yellow-500">
-    <img className="object-cover w-full h-60 md:h-72 relative overflow-hidden" style={{ width: '400px', height: 'auto' }} loading="lazy" src="https://i.ibb.co/f16Mt2R/rawierID.gif" alt="People working together at a desk" />
+    <img className="object-cover w-full h-60 md:h-72 relative overflow-hidden" style={{ width: '400px', height: 'auto' }} loading="lazy" src="https://i.ibb.co/bKNbrtP/portfolio.png" alt="People working together at a desk" />
       <div className="p-4">
       <div>
-        <a href="example.com" target="_blank" rel="noopener noreferrer" className="inline-block">
+        <a href="https://github.com/Rawierdt/Portafolio" target="_blank" rel="noopener noreferrer" className="inline-block">
           <svg className="inline-block w-6 h-6 text-gray-800 align-middle dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
           </svg>
-          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">Tidex Ransomware</span>
+          <span className="ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:underline">Rawier's Portfolio</span>
         </a>
       </div>
         <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
             <svg className="inline-block w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/>
             </svg>
-            🟡🔵 CODE
+            🔵 React | 🔵 Typescript
         </span>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-          Small example of Linux Ransomware.
+          This is my portfolio.
         </p>
         <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-          Simple little Ransomware, only works to encrypt files in the directory path Desktop and subdirectories, At the moment it can only be executed on Linux machines. it lacks decryption function, the KEY is: hkpykiiqftupr3okl04azj
+          This is my portfolio, it was written in Typescript with Tailwind using Nextjs framework, this portfolio is constantly updated. I hope you like it 🔥, if you have any questions feel free to ask me or contact me on my networks
         </p>
         <div className="flex justify-between mt-4">
           <p className="text-xs text-yellow-500">
-            Jan 30, 2023
+            Mar 28, 2024
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/tidex', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app', '_blank')} className="select-none rounded-lg bg-blue-500 py-2 px-4 text-center text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
             Read More
           </button>
         </div>
@@ -203,7 +204,7 @@ const Portfolio: NextPage = (): ReactElement => {
             <svg className="inline-block w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/>
             </svg>
-            🟡🔵 Python
+            🟡🔵 Python | ⚪ Linux
         </span>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
           Small example of Linux Ransomware.
@@ -239,7 +240,7 @@ const Portfolio: NextPage = (): ReactElement => {
             <svg className="inline-block w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m8 9 3 3-3 3m5 0h3M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
             </svg>
-            🟢 Administration | Linux 
+            🟢 Administration | ⚪ Linux | 🟡 SQL
         </span>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
           Alo Polisia was a community was created to help anyone...
@@ -316,7 +317,7 @@ const Portfolio: NextPage = (): ReactElement => {
             <svg className="inline-block w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/>
             </svg>
-            🟡🔵 Python
+            🟡🔵 Python | 🟡 SQL
         </span>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
           2 programs written on python for several purposes.
@@ -393,7 +394,7 @@ const Portfolio: NextPage = (): ReactElement => {
             <svg className="inline-block w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/>
             </svg>
-            🔵 Typescript
+            🔵 Typescript | 🟢 Nodejs | 🟡 SQL
         </span>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
           Multiprospose Discord Bot v12.
@@ -465,7 +466,7 @@ const Portfolio: NextPage = (): ReactElement => {
             <svg className="inline-block w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/>
             </svg>
-            🟠 Java
+            🟠 Java | 🟡 SQL
         </span>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
           Java CRUD, using NetBeans and MySQL
