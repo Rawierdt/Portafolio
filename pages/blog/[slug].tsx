@@ -14,6 +14,8 @@ import java from 'react-syntax-highlighter/dist/cjs/languages/prism/java';
 import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml';
 import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import python from 'react-syntax-highlighter/dist/cjs/languages/prism/python';
+import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
+import powershell from 'react-syntax-highlighter/dist/cjs/languages/prism/powershell';
 
 // Registra el lenguaje Python
 SyntaxHighlighter.registerLanguage('python', python);
@@ -21,8 +23,8 @@ SyntaxHighlighter.registerLanguage('sql', sql);
 SyntaxHighlighter.registerLanguage('c', c);
 SyntaxHighlighter.registerLanguage('java', java);
 SyntaxHighlighter.registerLanguage('yaml', yaml);
-
-
+SyntaxHighlighter.registerLanguage('bash', bash);
+SyntaxHighlighter.registerLanguage('powershell', powershell);
 
 interface Frontmatter {
   title: string;
