@@ -2,7 +2,7 @@
 title: "[EN] Anayansi cracker and create hashes"
 excerpt: "[EN] A script for crack or create a hash!"
 date: "Mar 30 2024"
-cover_image: "/blog/anayansi.webp"
+cover_image: "/blog/anayansi1.webp"
 alt: "Anayansi"
 ---
 
@@ -38,7 +38,7 @@ Anayansi is a script for crack or create a hash written in python, multiplatform
 
 Execute the commands according to your case (Win or Linux)
 
-`pyhon` for windows `python3` for Linux
+**pyhon** for windows **python3** for Linux
 
 Clone or Download this Repository
 
