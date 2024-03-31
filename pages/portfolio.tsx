@@ -62,7 +62,7 @@ const Portfolio: NextPage = (): ReactElement => {
           Create and Cracker Hashes written in python.
         </p>
         <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-          This tool written in python will allow you to create hashes or break them using a dictionary of words such as rockyou.txt. Just pass the path where you will have your worldlist or dictionary and then specify the type of hash, MD5, SHA1, SHA256, SHA384, SHA512 and just paste the hash and wait.
+          This tool written in python will allow you to create hashes or break them using a dictionary of words such as rockyou.txt. Just pass the path where you will have your worldlist or dictionary and then specify the type of hash, MD5, SHA1, SHA256, SHA384, SHA512.
         </p>
         <div className="flex justify-between mt-4">
           <p className="text-xs text-yellow-500">

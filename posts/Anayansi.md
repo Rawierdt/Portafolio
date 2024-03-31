@@ -125,6 +125,12 @@ def md5():
 
 &nbsp;
 
+### Download via GitHub
+
+[Download](https://github.com/Rawierdt/Anayansi)
+
+&nbsp;
+
 ### 📝 License
 
 Copyright © 2024 [Rawier](https://rawier.vercel.app). This project is [MIT](https://github.com/Rawierdt/Anayansi/blob/main/LICENSE) licensed.
