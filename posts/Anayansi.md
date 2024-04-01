@@ -2,8 +2,10 @@
 title: "[EN] Anayansi cracker and create hashes"
 excerpt: "[EN] A script for crack or create a hash!"
 date: "Mar 30 2024"
-cover_image: "/blog/anayansi1.webp"
+cover_image: "/blog/anayansi0.webp"
 alt: "Anayansi"
+tags1: "Python"
+tags2: "Tool"
 ---
 
 ![Anayansi](https://raw.githubusercontent.com/Rawierdt/Anayansi/main/assets/title.jpg)

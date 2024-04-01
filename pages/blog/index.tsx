@@ -9,15 +9,33 @@ import { Key } from "react";
 import { IPost, PostsType } from "../../models";
 import { config } from "../../config";
 
-export default function Blog({ posts }: PostsType) {
-  const [currentPage, setCurrentPage] = useState(1);
+export default function Blog({ posts }: PostsType) {  const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
+
+  // Estado para las publicaciones filtradas
+  const [filteredPosts, setFilteredPosts] = useState(posts);
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost); // Utiliza filteredPosts aquí
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
+// Función para manejar la búsqueda
+const handleSearch = (query: string) => {
+  const lowerCaseQuery = query.toLowerCase(); // Convertir la consulta a minúsculas
+  const filteredPosts = posts.filter((post) => {
+    // Filtra según el título, la fecha o las etiquetas
+    return (
+      post.frontmatter.title.toLowerCase().includes(lowerCaseQuery) ||
+      post.frontmatter.date.includes(query) ||
+      (post.frontmatter.tags1 && post.frontmatter.tags1.toLowerCase().includes(lowerCaseQuery)) || // Buscar la consulta en las etiquetas
+      (post.frontmatter.tags2 && post.frontmatter.tags2.toLowerCase().includes(lowerCaseQuery)) // Buscar la consulta en las etiquetas
+    );
+  });
+  // Actualiza el estado con las publicaciones filtradas
+  setFilteredPosts(filteredPosts);
+};
 
   return (
     <div>
@@ -39,12 +57,19 @@ export default function Blog({ posts }: PostsType) {
         <meta property="og:title" content="Rawier - Blog" />
         <meta property="og:url" content="https://rawier.vercel.app" />
       </Head>
+      
       <div className="container px-4 mx-auto my-12 md:px-12">
-        <div className="flex flex-wrap -mx-1 lg:-mx-4">
+        {/* Agrega el campo de búsqueda */}
+      <input
+        type="text"
+        placeholder="Buscar..."
+        onChange={(e) => handleSearch(e.target.value)}
+      />
+      <div className="flex flex-wrap -mx-1 lg:-mx-4">
         {currentPosts.map((post: IPost) => (
           <Post key={post.slug} post={post} />
         ))}
-        </div>
+      </div>
         <div className="flex justify-between mt-4">
           <button
             onClick={() => paginate(currentPage - 1)}

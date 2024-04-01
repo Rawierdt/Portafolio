@@ -2,7 +2,7 @@
 title: "[EN] Metacrawler 2"
 excerpt: "[EN] Metadata eraser for any file format!"
 date: "Mar 27 2024"
-cover_image: "/blog/metacrawler2.webp"
+cover_image: "/blog/metacrawlerimg.webp"
 alt: "Metacrawler 2"
 ---
 

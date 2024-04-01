@@ -16,15 +16,23 @@ import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import python from 'react-syntax-highlighter/dist/cjs/languages/prism/python';
 import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
 import powershell from 'react-syntax-highlighter/dist/cjs/languages/prism/powershell';
+import cpp from 'react-syntax-highlighter/dist/cjs/languages/prism/cpp';
+import batch from 'react-syntax-highlighter/dist/cjs/languages/prism/batch';
+import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
+import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
 
 // Registra el lenguaje Python
 SyntaxHighlighter.registerLanguage('python', python);
 SyntaxHighlighter.registerLanguage('sql', sql);
 SyntaxHighlighter.registerLanguage('c', c);
+SyntaxHighlighter.registerLanguage('cpp', cpp);
 SyntaxHighlighter.registerLanguage('java', java);
 SyntaxHighlighter.registerLanguage('yaml', yaml);
 SyntaxHighlighter.registerLanguage('bash', bash);
 SyntaxHighlighter.registerLanguage('powershell', powershell);
+SyntaxHighlighter.registerLanguage('batch', batch);
+SyntaxHighlighter.registerLanguage('jsx', jsx);
+SyntaxHighlighter.registerLanguage('javascript', javascript);
 
 interface Frontmatter {
   title: string;
@@ -32,6 +40,8 @@ interface Frontmatter {
   cover_image: string;
   alt: string;
   excerpt: string;
+  tags1: string;
+  tags2: string;
 }
 
 interface Props {
@@ -40,7 +50,7 @@ interface Props {
 }
 
 export default function PostPage({ frontmatter, content }: Props) {
-  const { title, date, cover_image, alt, excerpt } = frontmatter;
+  const { title, date, cover_image, alt, excerpt, tags1, tags2 } = frontmatter;
 
   return (
     <>
@@ -77,6 +87,7 @@ export default function PostPage({ frontmatter, content }: Props) {
             <h1 className="text-3xl">{title}</h1>
             <div className="text-xl">{excerpt}</div>
             <div className="text-xl">{date}</div>
+            <div className="text-sm">{tags1}, {tags2}</div>
             <img src={cover_image} alt={alt} />
           </div>
           <div className={`py-3 mt-3 text-base ${styles.markdownContent}`}>
@@ -132,8 +143,6 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
     </code>
   );
 };
-
-
 
 export async function getStaticPaths({ locales }: { locales: string[] }) {
   const files = fs.readdirSync(path.join("posts"));

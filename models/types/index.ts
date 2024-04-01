@@ -11,6 +11,8 @@ export interface FrontmatterType {
   excerpt: string;
   date: string;
   alt?: string;
+  tags1: string;
+  tags2: string;
 }
 
 export interface IPost {

@@ -7,17 +7,17 @@ export default function Post({ post }: PostType) {
       className="no-underline text-grey-darker hover:text-red-dark"
       href={`/blog/${post.slug}`}
     >
-      <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-        <article className="container overflow-hidden rounded-lg shadow-lg border-2 dark:hover:border-violet-700 hover:border-black dark:bg-slate-800">
+      <div className="w-full px-1 my-1 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        <article className="container overflow-hidden border-2 rounded-lg shadow-lg dark:hover:border-violet-700 hover:border-black dark:bg-slate-800">
           <a href={`/blog${post.slug}`}>
             <img
               alt="Placeholder"
-              className="block h-auto w-full"
+              className="block w-full h-auto"
               src={post.frontmatter.cover_image}
             />
           </a>
           <div className="container">
-            <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+            <header className="flex items-center justify-between p-2 leading-tight md:p-4">
               <h1 className="text-lg">
                 <a
                   href={`/blog/${post.slug}`}
@@ -25,9 +25,18 @@ export default function Post({ post }: PostType) {
                 >
                   {post.frontmatter.title}
                 </a>
-                <p className="text-grey-darker text-sm">
-                  {post.frontmatter.date}
-                </p>
+              <div className="flex items-center">
+                <button title="Badge" className="flex items-center p-1 border-2 rounded-md dark:border-b-violet-300 dark:bg-zinc-900 border-b-zinc-500">
+                  <span className="flex-grow text-xs">{post.frontmatter.tags1}</span>
+                </button>
+                <span className="inline-block mx-1 text-sm"> </span>
+                <button title="Badge" className="flex items-center p-1 border-2 rounded-md dark:border-b-violet-300 dark:bg-zinc-900 border-b-zinc-500">
+                  <span className="flex-grow text-xs">{post.frontmatter.tags2}</span>
+                </button>
+              </div>
+              <p className="text-sm text-grey-darker">
+                {post.frontmatter.date}
+              </p>
               </h1>
             </header>
           </div>

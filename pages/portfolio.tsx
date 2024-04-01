@@ -62,13 +62,13 @@ const Portfolio: NextPage = (): ReactElement => {
           Create and Cracker Hashes written in python.
         </p>
         <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-          This tool written in python will allow you to create hashes or break them using a dictionary of words such as rockyou.txt. Just pass the path where you will have your worldlist or dictionary and then specify the type of hash, MD5, SHA1, SHA256, SHA384, SHA512.
+          This tool written in python will allow you to create hashes or break them using a dictionary of words such as rockyou.txt. Just pass the path where you will have your worldlist for MD5, SHA1, SHA256, SHA384, SHA512.
         </p>
         <div className="flex justify-between mt-4">
           <p className="text-xs text-yellow-500">
             Apr 01, 2024
           </p>
-          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/anayansi', '_blank')} className="relative px-4 py-2 overflow-hidden font-medium text-green-400 duration-300 bg-green-900 border border-b-4 border-green-400 rounded-md outline-none hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 group">
+          <button data-ripple-light="true" type="button" onClick={() => window.open('https://rawier.vercel.app/blog/Anayansi', '_blank')} className="relative px-4 py-2 overflow-hidden font-medium text-green-400 duration-300 bg-green-900 border border-b-4 border-green-400 rounded-md outline-none hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 group">
           <span className="bg-green-400 shadow-green-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
             Read More</button>
         </div>
