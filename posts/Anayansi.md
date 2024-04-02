@@ -5,7 +5,7 @@ date: "Mar 30 2024"
 cover_image: "/blog/anayansi0.webp"
 alt: "Anayansi"
 tags1: "Python"
-tags2: "Tool"
+tags2: "Tools"
 ---
 
 ![Anayansi](https://raw.githubusercontent.com/Rawierdt/Anayansi/main/assets/title.jpg)
@@ -127,7 +127,9 @@ def md5():
 
 &nbsp;
 
-### Download via GitHub
+### ✅ ⬇ Download ⬇
+
+Available for Mac, Linux and Windows.
 
 [Download](https://github.com/Rawierdt/Anayansi)
 

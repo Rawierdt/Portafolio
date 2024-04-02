@@ -4,6 +4,8 @@ excerpt: "[EN]  Tracker IP Sobre sitios web y mas"
 date: "Dec 21 2022"
 cover_image: "/blog/tiptracker.webp"
 alt: "entities"
+tags1: "Python"
+tags2: "Tools"
 ---
 
 # Installation

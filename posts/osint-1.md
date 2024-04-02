@@ -4,6 +4,8 @@ excerpt: "[ES] Exploraremos una lista de herramientas para OSINT"
 date: "Sep 18 2023"
 cover_image: "/blog/osint1.webp"
 alt: "OSINT 1"
+tags1: "Helpdesk"
+tags2: "Tools"
 ---
 
 **Antes de comenzar.**

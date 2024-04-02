@@ -4,6 +4,8 @@ excerpt: "[ES] Music aplication (electron), for Diana Sessions from Riot Games M
 date: "Aug 14 2022"
 cover_image: "/blog/dianasessions.webp"
 alt: "entities"
+tags1: "JavaScript"
+tags2: "Clone"
 ---
 
 ![Captura](https://raw.githubusercontent.com/Rawierdt/Chilltify/main/Screenshots/Index.png)

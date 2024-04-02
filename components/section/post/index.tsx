@@ -26,11 +26,11 @@ export default function Post({ post }: PostType) {
                   {post.frontmatter.title}
                 </a>
               <div className="flex items-center">
-                <button title="Badge" className="flex items-center p-1 border-2 rounded-md dark:border-b-violet-300 dark:bg-zinc-900 border-b-zinc-500">
+                <button title="Badge" className="flex items-center p-1 border-2 rounded-md dark:border-b-violet-300 dark:bg-zinc-900 border-b-zinc-500 border-l-zinc-400">
                   <span className="flex-grow text-xs">{post.frontmatter.tags1}</span>
                 </button>
                 <span className="inline-block mx-1 text-sm"> </span>
-                <button title="Badge" className="flex items-center p-1 border-2 rounded-md dark:border-b-violet-300 dark:bg-zinc-900 border-b-zinc-500">
+                <button title="Badge" className="flex items-center p-1 border-2 rounded-md dark:border-b-violet-300 dark:bg-zinc-900 border-b-zinc-500 border-l-zinc-400">
                   <span className="flex-grow text-xs">{post.frontmatter.tags2}</span>
                 </button>
               </div>

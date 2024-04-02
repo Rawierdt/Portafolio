@@ -23,8 +23,13 @@ const About: React.FC = (): ReactElement => {
           <h1 className="text-2xl font-bold text-black-900 lg:text-5xl dark:text-white">
             Alejandro Aguilar
           </h1>
-          <h3 className="text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">
+          {/* <h3 className="text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">
             {t("job")}
+          </h3> */}
+          <h3 className="text-2xl font-bold lg:text-3xl">
+            <span className="text-transparent bg-gradient-to-r from-zinc-800 to-slate-400 dark:from-slate-200 dark:to-zinc-600 bg-clip-text">
+              {t("job")}
+            </span>
           </h3>
           <div className="flex items-center justify-center mt-2 space-x-2 md:justify-center lg:justify-start xsm:justify-center sm:justify-center">
             <a href={t("resume-link")} target={"_blank"}>

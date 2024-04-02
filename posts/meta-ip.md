@@ -3,6 +3,8 @@ title: "[EN] Metacrawler (Metadata) & IPTrack (IP Lookup)"
 excerpt: "[EN] Metadata Eraser and IPLookup"
 date: "Apr 23 2023"
 cover_image: "/blog/metacrawler.webp"
+tags1: "Helpdesk"
+tags2: "Tools"
 ---
 
 # Tidex

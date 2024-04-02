@@ -4,6 +4,8 @@ excerpt: "[ES] Veremos de cerca que podemos hacer frente a la singularidad"
 date: "Feb 25 2024"
 cover_image: "/blog/ia1.webp"
 alt: "AI 1"
+tags1: "Helpdesk"
+tags2: "AI"
 ---
 
 ## Atención

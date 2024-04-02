@@ -60,11 +60,25 @@ const handleSearch = (query: string) => {
       
       <div className="container px-4 mx-auto my-12 md:px-12">
         {/* Agrega el campo de búsqueda */}
-      <input
+
+      <div className='max-w-md mx-auto'>
+        <div className="relative flex items-center w-full h-12 overflow-hidden rounded-lg bg-zinc-200 dark:bg-violet-800 focus-within:shadow-lg dark:focus-within:shadow-violet-900">
+        <div className="grid w-12 h-full place-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+        {/* Aqui esta el input de busqueda */}
+        <input
+        className="w-full h-full pr-2 text-sm outline-none peer"
         type="text"
-        placeholder="Buscar..."
+        id="search"
+        placeholder=" Search something..."
         onChange={(e) => handleSearch(e.target.value)}
-      />
+        />
+      </div>
+      </div>
+
       <div className="flex flex-wrap -mx-1 lg:-mx-4">
         {currentPosts.map((post: IPost) => (
           <Post key={post.slug} post={post} />

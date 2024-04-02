@@ -4,6 +4,8 @@ excerpt: "[EN] Welcome to the red team!"
 date: "Mar 21 2024"
 cover_image: "/blog/cibersec.webp"
 alt: "Cibersec 2"
+tags1: "Helpdesk"
+tags2: "Hacking"
 ---
 
 # Acontinuación continuamos con algunos terminos fundamentales para entender esta hermosa rama de la informática (Parte 2).

@@ -3,6 +3,8 @@ title: "[ES] Fundamentos Ciberseguridad 1"
 excerpt: "[ES] Some interesting terms in cybersecurity"
 date: "Nov 08 2022"
 cover_image: "/blog/cibersec.webp"
+tags1: "Helpdesk"
+tags2: "Hacking"
 ---
 
 # Acontinuación veremos algunos terminos fundamentales para entender esta hermosa rama de la informática.

@@ -3,6 +3,8 @@ title: "[ES] Herramientas Hacking Web P1"
 excerpt: "[ES] Herramientas para hacking parte 1"
 date: "Jan 14 2023"
 cover_image: "/blog/herramientas1.webp"
+tags1: "Helpdesk"
+tags2: "Tools"
 ---
 
 # Acontinuación veras una pequeña lista de herramientas para ataque

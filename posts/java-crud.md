@@ -4,6 +4,8 @@ excerpt: "[ES] java CRUD"
 date: "Dec 28 2021"
 cover_image: "/blog/JavaCrud.webp"
 alt: "Java"
+tags1: "Java"
+tags2: "MySQL"
 ---
 
 # Java CRUD
@@ -26,7 +28,7 @@ alt: "Java"
 <br>
 
 * [GitHub](https://github.com/Rawierdt/java-crud-alumnos)
-* 
+  
 * [Docs](https://github.com/Rawierdt/java-crud-alumnos/blob/main/DocCalificaciones.pdf)
 
 <br>

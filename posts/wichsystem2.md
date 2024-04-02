@@ -4,6 +4,8 @@ excerpt: "[ES] Script en python que nos dice si un sistema es windows o linux y 
 date: "Aug 23 2022"
 cover_image: "/blog/whichsystem.webp"
 alt: "wichsystem"
+tags1: "Python"
+tags2: "Tools"
 ---
 
 **Script realizado por [S4vitar](https://www.youtube.com/c/s4vitar), modificado por mi agregando una función para analizar los puertos abiertos.**

@@ -4,6 +4,8 @@ excerpt: "[EN] How the noddles fucks me here"
 date: "Mar 21 2024"
 cover_image: "/blog/thoinpink.webp"
 alt: "IRL N1"
+tags1: "IRL"
+tags2: "Mental Health"
 ---
 
 # Hi there! 👋, this is the first publish as a life blog.
@@ -22,7 +24,7 @@ From the sequence:
 
 Find the sequence after n + 5:
 
-```javascript
+```jsx
 0, 0, 0, 0, 0, 1, 1, 1, 3, 4, 5, 7, 9, 12, 18, 22, 25, 36, 46, 48, 62, 76, 88, 107, 126, 142, 179, 198, 216, 257, 304, 329, 382, 431, 483, 547, 601, 643, 764, 838, 889
 
 ```

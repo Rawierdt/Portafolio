@@ -4,6 +4,8 @@ excerpt: "[ES] Abordamos el principio de minimo privilegio"
 date: "Sep 11 2023"
 cover_image: "/blog/lmenor-privilegio.webp"
 alt: "Creacion Usuarios"
+tags1: "Helpdesk"
+tags2: "Hacking"
 ---
 
 **Aclarando dudas.**
