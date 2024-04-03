@@ -60,18 +60,6 @@
         "readMoreLink": "https://rawier.vercel.app/blog/tidex"
     },
     {
-        "title": "Alo Polisia Community",
-        "language": "Administration",
-        "language2": "SQL",
-        "date": "Undefined",
-        "image": "https://i.ibb.co/pfsZcLx/alopolisia.png",
-        "altText": "Alo Polisia",
-        "githubLink": "https://github.com/Rawierdt/alopolisia",
-        "description1": "Alo Polisia was a community was created...",
-        "description2": "Who felt alone during the 2020 pandemic, used to play on a minecraft or another games that reached 100 players per month, I will be eternally grateful to them.",
-        "readMoreLink": "https://rawier.vercel.app/404"
-    },
-    {
         "title": "SisLog",
         "language": "Python",
         "language2": "",
@@ -96,22 +84,10 @@
         "readMoreLink": "https://rawier.vercel.app/blog/meta-ip"
     },
     {
-        "title": "Espejito, Espejito..",
-        "language": "JavaScript",
-        "language2": "",
-        "date": "Dec 28, 2021",
-        "image": "https://i.ibb.co/8rBdqmZ/Espejitoo.png",
-        "altText": "Espejito information checker",
-        "githubLink": "https://github.com/Rawierdt/espejito",
-        "description1": "Small application that displays...",
-        "description2": "This application shows all the information that a web page can obtain; View your data, if you are using VPN it will show another address, may block tracking.",
-        "readMoreLink": "https://rawierdt.github.io/espejito/"
-    },
-    {
         "title": "Cler Multiprospose Discord Bot",
         "language": "TypeScript",
         "language2": "SQL",
-        "date": "Undefined",
+        "date": "Dec 12 2022",
         "image": "https://i.ibb.co/hxG12bT/Cler.png",
         "altText": "Cler Discord Bot",
         "githubLink": "https://rawierdt.github.io/Cler-page/",
@@ -120,10 +96,22 @@
         "readMoreLink": "https://rawier.vercel.app/blog/cler10"
     },
     {
+        "title": "Alo Polisia Community",
+        "language": "Administration",
+        "language2": "SQL",
+        "date": "Dec 12 2022",
+        "image": "https://i.ibb.co/pfsZcLx/alopolisia.png",
+        "altText": "Alo Polisia",
+        "githubLink": "https://github.com/Rawierdt/alopolisia",
+        "description1": "Alo Polisia was a community was created...",
+        "description2": "Who felt alone during the 2020 pandemic, used to play on a minecraft or another games that reached 100 players per month, I will be eternally grateful to them.",
+        "readMoreLink": "https://rawier.vercel.app/404"
+    },
+    {
         "title": "Chilltify (Spotify Clone)",
         "language": "Electron",
         "language2": "JavaScript",
-        "date": "Undefined",
+        "date": "Dec 12 2022",
         "image": "https://i.ibb.co/7VGj1mR/chilltifyel.png",
         "altText": "Chiltify",
         "githubLink": "https://github.com/Rawierdt/Chilltify",
@@ -135,12 +123,24 @@
         "title": "JAVA CRUD Alumnos",
         "language": "Java",
         "language2": "SQL",
-        "date": "Undefined",
+        "date": "Dec 12 2022",
         "image": "https://i.ibb.co/XkJ95Wm/alumnos-crud.png",
         "altText": "CRUD Java for School",
         "githubLink": "https://github.com/Rawierdt/java-crud-alumnos/tree/main",
         "description1": "Java CRUD, using NetBeans and MySQL.",
         "description2": "Java CRUD (CREATE, READ, UPDATE, DELETE) for the faculty of computer science UPIICSA for student registration or delete, also you can put filter options, works with MySQL database.",
         "readMoreLink": "https://rawier.vercel.app/blog/java-crud"
+    },
+    {
+        "title": "Espejito, Espejito..",
+        "language": "JavaScript",
+        "language2": "",
+        "date": "Dec 28, 2021",
+        "image": "https://i.ibb.co/8rBdqmZ/Espejitoo.png",
+        "altText": "Espejito information checker",
+        "githubLink": "https://github.com/Rawierdt/espejito",
+        "description1": "Small application that displays...",
+        "description2": "This application shows all the information that a web page can obtain; View your data, if you are using VPN it will show another address, may block tracking.",
+        "readMoreLink": "https://rawierdt.github.io/espejito/"
     }
 ]

@@ -30,27 +30,23 @@ const Portfolio: NextPage = () => {
   }, []);
 
   const filteredData = data ? data.filter((item: Item) => {
-    if (sortOrder === "") {
-      return (
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.date.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description1.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.language.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.language2.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    } else {
-      return (
-        (item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.date.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description1.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.language.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.language2.toLowerCase().includes(searchTerm.toLowerCase())) &&
-        // Verificar si sortOrder es una propiedad válida de Item
-        (sortOrder === "asc" || sortOrder === "desc" || sortOrder in item ? true : false) &&
-        // Filtrar según el orden seleccionado
-        (sortOrder === "asc" || sortOrder === "desc" ? true : item[sortOrder as keyof Item].toLowerCase().includes(searchTerm.toLowerCase()))
-      );
-    }
+    // Filtrar según el término de búsqueda si está presente
+    const searchTermMatches =
+      searchTerm === "" ||
+      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.date.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description1.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.language.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.language2.toLowerCase().includes(searchTerm.toLowerCase());
+  
+    // Filtrar según el orden seleccionado
+    const sortOrderMatches =
+      sortOrder === "" ||
+      (sortOrder === "asc" || sortOrder === "desc"
+        ? true
+        : (item[sortOrder as keyof Item] || "").toLowerCase().includes(searchTerm.toLowerCase()));
+  
+    return searchTermMatches && sortOrderMatches;
   }).sort((a, b) => {
     switch (sortOrder) {
       case "asc":
