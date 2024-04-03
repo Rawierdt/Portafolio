@@ -1,12 +1,11 @@
-import type { NextPage } from 'next'
-import Link from 'next/link';
 import React, { useState, useEffect } from "react";
-import useTranslation from "next-translate/useTranslation";
+import type { NextPage } from 'next';
 import Head from 'next/head'
 
 interface Item {
   title: string;
   language: string;
+  language2: string;
   date: string;
   image: string;
   altText: string;
@@ -17,9 +16,9 @@ interface Item {
 }
 
 const Portfolio: NextPage = () => {
-  const { t } = useTranslation("index");
   const [data, setData] = useState<Item[] | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const [sortOrder, setSortOrder] = useState<string>(""); // Cambiado a ""
 
   useEffect(() => {
     async function fetchData() {
@@ -31,13 +30,47 @@ const Portfolio: NextPage = () => {
   }, []);
 
   const filteredData = data ? data.filter((item: Item) => {
-    return (
-      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.date.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.description1.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.language.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    if (sortOrder === "") {
+      return (
+        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.date.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.description1.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.language.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.language2.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    } else {
+      return (
+        (item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.date.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.description1.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.language.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.language2.toLowerCase().includes(searchTerm.toLowerCase())) &&
+        // Verificar si sortOrder es una propiedad válida de Item
+        (sortOrder === "asc" || sortOrder === "desc" || sortOrder in item ? true : false) &&
+        // Filtrar según el orden seleccionado
+        (sortOrder === "asc" || sortOrder === "desc" ? true : item[sortOrder as keyof Item].toLowerCase().includes(searchTerm.toLowerCase()))
+      );
+    }
+  }).sort((a, b) => {
+    switch (sortOrder) {
+      case "asc":
+        return a.date.localeCompare(b.date);
+      case "desc":
+        return b.date.localeCompare(a.date);
+      case "titleAsc":
+        return a.title.localeCompare(b.title);
+      case "titleDesc":
+        return b.title.localeCompare(a.title);
+      case "langAsc":
+        return a.language.localeCompare(b.language);
+      case "langDesc":
+        return b.language.localeCompare(a.language);
+      default:
+        return 0;
+    }
   }) : [];
+  
+  
 
   return (
     <>
@@ -48,11 +81,11 @@ const Portfolio: NextPage = () => {
       </noscript>
       <Head>
         <title>Rawier - Portfolio</title>
-        <link rel="shortcut icon" type="image/png" href="./Rawier-icon.png" />
+        <link rel="shortcut icon" type="image/png" href="../Rawier-icon.png" />
         <meta name="description"
           content="Rawier's Portfolio."></meta>
         <meta property="og:description"
-          content="Rawier's Portfolio." />
+          content="Rawier's Proyects and portfolio." />
         <meta property="og:title" content="Rawier - Portfolio" />
         <meta property="og:url" content="https://Rawier.vercel.app/portfolio" />
       </Head>
@@ -62,30 +95,63 @@ const Portfolio: NextPage = () => {
           <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="../Rawier-icon.png" width="90" height="90"></img>
         </div>
         <br />
-        <h1 className="flex justify-center text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">PROJECTS</h1>
-        <p className="flex justify-center font-bold text-center text-black-900 dark:text-white">Here are some of my most recent projects and contributions.</p>
+        <h1 className="flex justify-center text-2xl font-bold lg:text-3xl">
+          <span className="text-transparent bg-gradient-to-r from-zinc-900 to-slate-500 dark:from-violet-600 dark:to-zinc-600 bg-clip-text">PROJECTS</span>
+        </h1>
+        <p className="flex justify-center font-semibold text-center">Here are some of my most recent projects and contributions</p>
         <br />
-        <br />
-        <div className='max-w-md mx-auto'>
-          <div className="relative flex items-center w-full h-12 overflow-hidden rounded-lg bg-zinc-200 dark:bg-violet-800 focus-within:shadow-lg dark:focus-within:shadow-violet-900">
-            <div className="grid w-12 h-full place-items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-            {/* Aquí está el input de búsqueda */}
-            <input
-              className="w-full h-full pr-2 text-sm outline-none peer"
-              type="text"
-              id="search"
-              placeholder=" Search something..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-          </div>
-        </div>
 
-        {/* Aquí comienzan los proyectos mostrados en tablas */}
+        <div className='flex items-center justify-center max-w-md mx-auto'>
+  <div className="relative flex items-center h-12 overflow-hidden rounded-lg bg-zinc-200 dark:bg-violet-800 focus-within:shadow-lg dark:focus-within:shadow-violet-900">
+    <div className="grid w-12 h-full place-items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    </div>
+    <input
+      className="w-full h-full pr-2 text-sm outline-none peer"
+      type="text"
+      id="search"
+      placeholder=" Search something..."
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+    />
+  </div>
+  <div className="relative flex items-center h-12 ml-2 overflow-hidden rounded-lg bg-zinc-200 dark:bg-violet-800 focus-within:shadow-lg dark:focus-within:shadow-violet-900">
+  <select
+    className="block px-2 py-2 pr-8 leading-tight text-gray-700 border rounded-lg appearance-none bg-zinc-200 dark:bg-violet-800 border-zinc-200 dark:border-violet-800 dark:text-slate-200 focus:outline-none focus:bg-white focus:border-gray-500"
+    value={sortOrder}
+    onChange={(e) => setSortOrder(e.target.value)}
+  >
+    <option value="">No Filter</option>
+    <option value="asc">Date (Asc)</option>
+    <option value="desc">Date (Desc)</option>
+    <option value="titleAsc">Title (Asc)</option>
+    <option value="titleDesc">Title (Desc)</option>
+    <option value="langAsc">Language (Asc)</option>
+    <option value="langDesc">Language (Desc)</option>
+  </select>
+  <div className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none dark:text-slate-200">
+    {/* Flecha hacia abajo */}
+    <svg
+      className="w-4 h-4 fill-current"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fillRule="evenodd"
+        d="M10 12.586L4.707 7.293a1 1 0 0 1 1.414-1.414L10 10.758l4.879-4.879a1 1 0 0 1 1.414 1.414L10 12.586z"
+        clipRule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+
+</div>
+
+        <br />
+        {/* Cada royecto es un elemento, mostrados tres por fila para pantallas grandes y uno para dispositivos moviles */}
         <div className="flex flex-wrap justify-center gap-6">
           {filteredData.map((item: Item, index: number) => (
             <div key={index} className="w-full p-2 sm:w-1/2 lg:w-1/3 xl:w-1/4">
@@ -104,7 +170,8 @@ const Portfolio: NextPage = () => {
                     <svg className="inline-block w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                       <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/>
                     </svg>
-                    {item.language}
+                    <span>{item.language}</span>
+                    <span className="mx-2">{item.language2}</span>
                   </span>
                   <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
                     {item.description1}

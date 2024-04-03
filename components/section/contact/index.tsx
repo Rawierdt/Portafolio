@@ -66,10 +66,6 @@ const Contact: React.FC = (): ReactElement => {
           <br />
           <p className="text-2xl text-center">FAQ</p>
           <p className="flex select-none justify-evenly">{t("faq")}</p>
-          {/* <br />
-          <p className="text-2xl text-center">CLAVES</p>
-          <small className="flex select-all justify-evenly">
-          -----</small> */}
 {/* 𝕽♛ */}
         </div>
       </div>

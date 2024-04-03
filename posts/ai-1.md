@@ -1,5 +1,5 @@
 ---
-title: "[ES] Como defenderte de la inteligencia artifical"
+title: "[ES] Como defenderte de la IA"
 excerpt: "[ES] Veremos de cerca que podemos hacer frente a la singularidad"
 date: "Feb 25 2024"
 cover_image: "/blog/ia1.webp"
