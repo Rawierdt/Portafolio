@@ -8,30 +8,34 @@ import Head from "next/head";
 import { config } from "../../config";
 import styles from "./post.module.css";
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import sql from 'react-syntax-highlighter/dist/cjs/languages/prism/sql';
 import c from 'react-syntax-highlighter/dist/cjs/languages/prism/c';
+import sql from 'react-syntax-highlighter/dist/cjs/languages/prism/sql';
+import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
+import cpp from 'react-syntax-highlighter/dist/cjs/languages/prism/cpp';
+import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import java from 'react-syntax-highlighter/dist/cjs/languages/prism/java';
 import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml';
-import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import python from 'react-syntax-highlighter/dist/cjs/languages/prism/python';
 import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
-import powershell from 'react-syntax-highlighter/dist/cjs/languages/prism/powershell';
-import cpp from 'react-syntax-highlighter/dist/cjs/languages/prism/cpp';
 import batch from 'react-syntax-highlighter/dist/cjs/languages/prism/batch';
-import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
+import python from 'react-syntax-highlighter/dist/cjs/languages/prism/python';
+import ignore from 'react-syntax-highlighter/dist/cjs/languages/prism/ignore';
+import powershell from 'react-syntax-highlighter/dist/cjs/languages/prism/powershell';
 import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
+import { useEffect, useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 // Registra el lenguaje Python
-SyntaxHighlighter.registerLanguage('python', python);
-SyntaxHighlighter.registerLanguage('sql', sql);
 SyntaxHighlighter.registerLanguage('c', c);
+SyntaxHighlighter.registerLanguage('sql', sql);
+SyntaxHighlighter.registerLanguage('jsx', jsx);
 SyntaxHighlighter.registerLanguage('cpp', cpp);
+SyntaxHighlighter.registerLanguage('nx', ignore);
 SyntaxHighlighter.registerLanguage('java', java);
 SyntaxHighlighter.registerLanguage('yaml', yaml);
 SyntaxHighlighter.registerLanguage('bash', bash);
-SyntaxHighlighter.registerLanguage('powershell', powershell);
 SyntaxHighlighter.registerLanguage('batch', batch);
-SyntaxHighlighter.registerLanguage('jsx', jsx);
+SyntaxHighlighter.registerLanguage('python', python);
+SyntaxHighlighter.registerLanguage('powershell', powershell);
 SyntaxHighlighter.registerLanguage('javascript', javascript);
 
 interface Frontmatter {
@@ -117,7 +121,6 @@ const BlockquoteComponent: React.FC<BlockquoteProps> = ({ children }) => {
   return <blockquote className={styles.blockquote}>{children}</blockquote>;
 };
 
-
 interface CodeComponentProps {
   node?: any; // Hacer la prop 'node' opcional
   inline?: boolean;
@@ -132,11 +135,63 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
   children,
   ...props
 }) => {
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (copied) {
+      const timer = setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [copied]);
+
   const match = /language-(\w+)/.exec(className || "");
+  const language = match ? match[1] : "";
+
   return !inline && match ? (
-    <SyntaxHighlighter language={match[1]} style={okaidia}>
-      {String(children)}
-    </SyntaxHighlighter>
+    <div style={{ position: "relative" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          padding: "0.1em 0.5em",
+          background: "#333",
+          color: "#fff",
+          fontSize: "0.7em",
+          borderRadius: "0.25em",
+          zIndex: 1,
+        }}
+      >
+        #{language.toUpperCase()}
+      </div>
+      <div style={{ position: "relative" }}>
+        <div
+          style={{
+            position: "absolute",
+            top: "0",
+            right: "0",
+            padding: "0.5em",
+            background: "rgba(255, 255, 255, 0.8)",
+            color: "black",
+            borderRadius: "0.25em",
+          }}
+        >
+          {copied ? (
+            <span style={{ color: "violet" }}>Copied!</span>
+          ) : (
+            <CopyToClipboard text={String(children)} onCopy={() => setCopied(true)}>
+              <button style={{ cursor: "pointer" }}>Copy</button>
+            </CopyToClipboard>
+          )}
+        </div>
+        <SyntaxHighlighter language={language} style={okaidia}>
+          {String(children)}
+        </SyntaxHighlighter>
+      </div>
+    </div>
   ) : (
     <code className={className} {...props}>
       {children}

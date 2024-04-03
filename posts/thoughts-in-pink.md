@@ -24,7 +24,7 @@ From the sequence:
 
 Find the sequence after n + 5:
 
-```jsx
+```nx
 0, 0, 0, 0, 0, 1, 1, 1, 3, 4, 5, 7, 9, 12, 18, 22, 25, 36, 46, 48, 62, 76, 88, 107, 126, 142, 179, 198, 216, 257, 304, 329, 382, 431, 483, 547, 601, 643, 764, 838, 889
 
 ```
@@ -37,7 +37,7 @@ You overthink things, over and over again, until you fall under the weight of th
 
 ---
 
-```javascript
+```nx
 ¿Porqué te escucho?
 
 ```
@@ -46,7 +46,7 @@ You overthink things, over and over again, until you fall under the weight of th
 
 &nbsp;
 
-```javascript
+```nx
 ¿Existes o solo estoy loco?
 
 ```
@@ -55,7 +55,7 @@ You overthink things, over and over again, until you fall under the weight of th
 
 &nbsp;
 
-```javascript
+```nx
 ¿Cuándo dejaré de escucharte?
 
 ```
@@ -64,7 +64,7 @@ You overthink things, over and over again, until you fall under the weight of th
 
 &nbsp;
 
-```javascript
+```nx
 ¿Estaré bien al dejarte?
 
 ```
@@ -73,7 +73,7 @@ You overthink things, over and over again, until you fall under the weight of th
 
 &nbsp;
 
-```javascript
+```nx
 ¿Y que haré si te necesito, dondé te encontraré nuevamente?
 
 ```
@@ -82,7 +82,7 @@ You overthink things, over and over again, until you fall under the weight of th
 
 &nbsp;
 
-```javascript
+```nx
 ¿Cómo se que estarás ahí, estarás feliz de verme un vez más?
 
 ```
@@ -91,7 +91,7 @@ You overthink things, over and over again, until you fall under the weight of th
 
 &nbsp;
 
-```javascript
+```nx
 ¿Qué pasará si me olvido?
 
 ```
@@ -100,7 +100,7 @@ You overthink things, over and over again, until you fall under the weight of th
 
 &nbsp;
 
-```javascript
+```nx
 ¿Y si muero sin poder encontrarte, estará bien dejarté?
 
 ```
