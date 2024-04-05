@@ -13,7 +13,7 @@ const Home: NextPage = (): ReactElement => {
         <link rel="shortcut icon" type="image/png" href="./Rawier-icon.png" />
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vitals.vercel-insights.com https://vitals.vercel-insights.com/v1/vitals; style-src 'self' 'unsafe-inline'; img-src 'self' data: *; font-src 'self';"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: *; font-src 'self'; connect-src 'self' https://vitals.vercel-insights.com;"
         />
         <meta name="theme-color:" content="#8e52f5"></meta>
         <meta property="og:image"
