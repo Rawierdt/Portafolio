@@ -26,11 +26,11 @@ const About: React.FC = (): ReactElement => {
           {/* <h3 className="text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">
             {t("job")}
           </h3> */}
-          <h3 className="text-2xl font-bold lg:text-3xl">
+          <h2 className="text-2xl font-bold lg:text-3xl">
             <span className="text-transparent bg-gradient-to-r from-zinc-800 to-slate-400 dark:from-slate-200 dark:to-zinc-600 bg-clip-text">
               {t("job")}
             </span>
-          </h3>
+          </h2>
           <div className="flex items-center justify-center mt-2 space-x-2 md:justify-center lg:justify-start xsm:justify-center sm:justify-center">
             <a href={t("resume-link")} target={"_blank"}>
               <button
@@ -49,8 +49,8 @@ const About: React.FC = (): ReactElement => {
         <div className="flex-shrink-0 mb-10 pointer-events-none focus:pointer-events-auto lg:mt-12 lg:px-4" draggable="false">
           <Image
             src={config.github.url}
+            priority={true}
             alt="Profile"
-            loading="lazy"
             className="rounded-full"
             width="250"
             height="250"            

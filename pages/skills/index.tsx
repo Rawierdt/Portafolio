@@ -10,6 +10,7 @@ const SkillsSection: NextPage = (): ReactElement => {
       <Head>
         <title>Rawier - Skills</title>
         <link rel="shortcut icon" type="image/jpg" href="../Rawier-icon.png" />
+        <meta name="theme-color:" content="#8e52f5"></meta>
         <meta property="og:image"
           content={config.github.url} />
         <meta name="description"

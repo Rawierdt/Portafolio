@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { ReactElement } from "react";
 import { Language, Theme } from "../../..";
 import useTranslation from "next-translate/useTranslation";
+import Image from 'next/image'
 
 /**
  * @description Here goes the theme button, music and home buttons
@@ -19,6 +20,16 @@ const Navigation: React.FC = (): ReactElement => {
               "font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"
             }
           >
+              {/* <div className="grid-element">
+                <Image
+                  priority={true}
+                  src="/../favicon.png"
+                  width={30}
+                  height={30}
+                  alt="Rawier Home"
+                  className="pointer-events-none focus:pointer-events-auto"
+                />
+              </div> */}
             <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="../favicon.png" width={30} height={30} alt="Rawier Home"></img>
           </a>
         </Link>
