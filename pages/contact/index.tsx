@@ -17,6 +17,11 @@ const ContactSection: NextPage = (): ReactElement => {
         <meta property="og:description"
           content="Skills section - Here I list most of the skills I use in my daily basis and my personal projects"/>
         <meta property="og:title" content="Rawier - Cybersecurity" />
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ibb.co https://raw.githubusercontent.com; font-src 'self';"
+        />
+        <meta name="theme-color:" content="#8e52f5"></meta>
         <meta property="og:url" content="https://Rawier.vercel.app" />
       </Head>
       <main className="max-w-4xl mx-auto mt-16 antialiased">

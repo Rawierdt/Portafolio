@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, PropsWithChildren } from "react";
 import { BoxType } from "../../../models";
 
 /**
@@ -12,11 +12,11 @@ import { BoxType } from "../../../models";
  * @returns { ReactElement }        A box square with a title and icons
  */
 
-const Box: React.FC<BoxType> = ({ title, icons }: BoxType): ReactElement => {
+const Box: React.FC<PropsWithChildren<BoxType>> = ({ title, icons }: PropsWithChildren<BoxType>): ReactElement => {
   return (
-    <div className="font-thin text-4xl m-5 flex-column rounded-2xl dark:hover:border-violet-700 hover:border-yellow-500 border-2 border-gray-900 dark:border-white p-2">
-      <h3 className="text-center text-2xl">{title}</h3>
-      <div className="flex justify-evenly mt-5">{icons}</div>
+    <div className="p-2 m-5 text-4xl font-thin border-2 border-gray-900 flex-column rounded-2xl dark:hover:border-violet-700 hover:border-yellow-500 dark:border-white">
+      <h3 className="text-2xl text-center">{title}</h3>
+      <div className="flex mt-5 justify-evenly">{icons}</div>
     </div>
   );
 };

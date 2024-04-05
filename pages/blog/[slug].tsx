@@ -23,6 +23,7 @@ import powershell from 'react-syntax-highlighter/dist/cjs/languages/prism/powers
 import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
 import { useEffect, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import useTranslation from "next-translate/useTranslation";
 
 // Registra el lenguaje Python
 SyntaxHighlighter.registerLanguage('c', c);
@@ -55,7 +56,7 @@ interface Props {
 
 export default function PostPage({ frontmatter, content }: Props) {
   const { title, date, cover_image, alt, excerpt, tags1, tags2 } = frontmatter;
-
+  const { t } = useTranslation("index");
   return (
     <>
       <Head>
@@ -72,6 +73,7 @@ export default function PostPage({ frontmatter, content }: Props) {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="https://rawier.vercel.app" />
         <meta property="og:image" content={cover_image}/>
+        <meta name="theme-color:" content="#8e52f5"></meta>
       </Head>
       <div className="container mx-auto">
         <div className="flex justify-start text-center">
@@ -81,7 +83,7 @@ export default function PostPage({ frontmatter, content }: Props) {
               className="me-5 mt-3 inline-block px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-700 hover:shadow-lg focus:bg-yellow-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-800 active:shadow-lg transition duration-150 ease-in-out dark:bg-purple-600 dark:hover:bg-purple-700 dark:active:bg-purple-800 dark:focus:bg-purple-700"
             >
               <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m15 19-7-7 7-7"/>
               </svg>
             </button>
           </Link>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import type { NextPage } from 'next';
 import Head from 'next/head'
+import useTranslation from "next-translate/useTranslation";
 
 interface Item {
   title: string;
@@ -16,6 +17,7 @@ interface Item {
 }
 
 const Portfolio: NextPage = () => {
+  const { t } = useTranslation("index");
   const [data, setData] = useState<Item[] | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [sortOrder, setSortOrder] = useState<string>(""); // Cambiado a ""
@@ -81,6 +83,11 @@ const Portfolio: NextPage = () => {
         <meta property="og:description"
           content="Rawier's Proyects and portfolio." />
         <meta property="og:title" content="Rawier - Portfolio" />
+        <meta name="theme-color:" content="#8e52f5"></meta>
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ibb.co https://raw.githubusercontent.com; font-src 'self';"
+        />
         <meta property="og:url" content="https://Rawier.vercel.app/portfolio" />
       </Head>
       <div className='portfolio'>

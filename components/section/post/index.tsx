@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { PostType } from "../../../models";
+import useTranslation from "next-translate/useTranslation";
 
 export default function Post({ post }: PostType) {
+  const { t } = useTranslation("index");
   return (
     <Link
       className="no-underline text-grey-darker hover:text-red-dark"

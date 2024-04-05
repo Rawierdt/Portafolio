@@ -8,10 +8,10 @@ import { sortByDate } from "../../utils/index";
 import { Key } from "react";
 import { IPost, PostsType } from "../../models";
 import { config } from "../../config";
+import useTranslation from "next-translate/useTranslation";
 
 export default function Blog({ posts }: PostsType) {  const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
-
   // Estado para las publicaciones filtradas
   const [filteredPosts, setFilteredPosts] = useState(posts);
 
@@ -36,7 +36,7 @@ const handleSearch = (query: string) => {
   // Actualiza el estado con las publicaciones filtradas
   setFilteredPosts(filteredPosts);
 };
-
+const { t } = useTranslation("index");
   return (
     <div>
       <Head>
@@ -46,6 +46,7 @@ const handleSearch = (query: string) => {
           <h1>You need to enable JavaScript to run this app.</h1>
         </noscript>
         <meta property="og:image" content={config.github.url} />
+        <meta name="theme-color:" content="#8e52f5"></meta>
         <meta
           name="description"
           content="Blog section - Here I have all the blog posts I had written in the past"
