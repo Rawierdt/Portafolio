@@ -13,7 +13,7 @@ const SkillsSection: NextPage = (): ReactElement => {
         <meta name="theme-color:" content="#8e52f5"></meta>
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ibb.co https://raw.githubusercontent.com; font-src 'self';"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com https://vitals.vercel-insights.com https://i.ibb.co https://raw.githubusercontent.com; font-src 'self';"
         />
         <meta property="og:image"
           content={config.github.url} />

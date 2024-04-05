@@ -69,7 +69,7 @@ const NotFound: NextPage = (): ReactElement => {
         <meta property="og:title" content="Rawier - Not Found" />
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ibb.co https://raw.githubusercontent.com; font-src 'self';"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com https://vitals.vercel-insights.com https://i.ibb.co https://raw.githubusercontent.com; font-src 'self';"
         />
         <meta property="og:url" content="https://Rawier.vercel.app" />
     </Head>
