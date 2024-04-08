@@ -150,7 +150,7 @@ const Portfolio: NextPage = () => {
 </div>
 </div>
         <br />
-        {/* Cada royecto es un elemento, mostrados tres por fila para pantallas grandes y uno para dispositivos moviles */}
+        {/* Cada proyecto es un elemento, mostrados tres por fila para pantallas grandes y uno para dispositivos moviles */}
         <div className="flex flex-wrap justify-center gap-6">
           {filteredData.map((item: Item, index: number) => (
             <div key={index} className="w-full p-2 sm:w-1/2 lg:w-1/3 xl:w-1/4">

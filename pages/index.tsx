@@ -19,9 +19,9 @@ const Home: NextPage = (): ReactElement => {
         <meta property="og:image"
           content={config.github.url} />
         <meta name="description"
-          content="I am passionate about cybersecurity. I am also a person who is eager to progress, learn and develop the skills that today's world needs."></meta>
+          content="IT consultant and web application developer, focused on results."></meta>
         <meta property="og:description"
-          content="I am passionate about cybersecurity. I am also a person who is eager to progress, learn and develop the skills that today's world needs." />
+          content="IT consultant and web application developer, focused on results." />
         <meta property="og:title" content="Rawier - Cybersecurity" />
         <meta property="og:url" content="https://Rawier.vercel.app" />
       </Head>

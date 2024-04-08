@@ -35,7 +35,6 @@ export interface PostsType {
   posts: IPost[];
 }
 
-
 export type IconsType = {
   text: string;
   children: React.ReactNode;
