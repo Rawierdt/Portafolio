@@ -1,5 +1,17 @@
 [
     {
+        "title": "EXAMPLE",
+        "language": "Python",
+        "language2": "",
+        "date": "Apr 08, 2024",
+        "image": "https://i.ibb.co/error.png",
+        "altText": "EXAMPLE",
+        "githubLink": "https://github.com/Rawierdt/Anayansi",
+        "description1": "EXAMPLE",
+        "description2": " EXAMPLE",
+        "readMoreLink": "https://rawier.vercel.app/blog/EXAMPLE"
+    },
+    {
         "title": "Anayansi",
         "language": "Python",
         "language2": "",
