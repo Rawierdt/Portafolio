@@ -6,8 +6,8 @@
         "date": "Apr 10, 2024",
         "image": "https://i.ibb.co/error.png",
         "altText": "Gie Tool",
-        "githubLink": "https://github.com/Rawierdt/Anayansi",
-        "description1": "An Encryptor and Decryptor Tool.",
+        "githubLink": "https://github.com/Rawierdt/GIE",
+        "description1": "An Encryption and Decryption Tool.",
         "description2": "Encrypt and Decrypt for any files and folders for Windows, written in Python",
         "readMoreLink": "https://rawier.vercel.app/blog/Gie"
     },
@@ -96,14 +96,14 @@
         "readMoreLink": "https://rawier.vercel.app/blog/meta-ip"
     },
     {
-        "title": "Cler Multiprospose Discord Bot",
+        "title": "Cler Multipurpose Discord Bot",
         "language": "TypeScript",
         "language2": "SQL",
         "date": "Dec 12 2022",
         "image": "https://i.ibb.co/hxG12bT/Cler.png",
         "altText": "Cler Discord Bot",
         "githubLink": "https://rawierdt.github.io/Cler-page/",
-        "description1": "Multiprospose Discord Bot v12.",
+        "description1": "Multipurpose Discord Bot v12.",
         "description2": "Spanish discord bot, code in node.js / discord.js, but it is easy to learn each command, Written in Typescript, Dotenv, Discord.js, API's, and more; Consult details on the Cler's web page.",
         "readMoreLink": "https://rawier.vercel.app/blog/cler10"
     },
@@ -127,7 +127,7 @@
         "image": "https://i.ibb.co/7VGj1mR/chilltifyel.png",
         "altText": "Chiltify",
         "githubLink": "https://github.com/Rawierdt/Chilltify",
-        "description1": "Music aplication, for Diana Sessions.",
+        "description1": "Music application, for Diana Sessions.",
         "description2": "Lofi music application made in electron, based on Diana Sessions from Riot Games Music, Spotify clone, built in Electron (HTML 5, Javascript, CSS), this aplication works on Windows, Linux and Mac.",
         "readMoreLink": "https://rawier.vercel.app/blog/chilltify"
     },
