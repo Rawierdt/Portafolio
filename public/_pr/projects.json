@@ -8,13 +8,13 @@
         "altText": "Gie Tool",
         "githubLink": "https://github.com/Rawierdt/GIE",
         "description1": "An Encryption and Decryption Tool.",
-        "description2": "Encrypt and Decrypt for any files and folders for Windows, written in Python",
+        "description2": "Encrypt and Decrypt for any files and folders for Windows, written in Python using AES, for any file, jpg, png, mp4, mp3, docx, pdf, etc, and folders or subfolders.",
         "readMoreLink": "https://rawier.vercel.app/blog/Gie"
     },
     {
         "title": "Anayansi",
         "language": "Python",
-        "language2": "",
+        "language2": "Bash",
         "date": "Apr 01, 2024",
         "image": "https://i.ibb.co/5rGvvFy/anayansi.png",
         "altText": "Anayansi tool",

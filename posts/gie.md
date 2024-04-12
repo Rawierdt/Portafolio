@@ -8,7 +8,7 @@ tags1: "Python"
 tags2: "Tools"
 ---
 
-![imageTitle]([/title.jpg](https://raw.githubusercontent.com/Rawierdt/GIE/main/title.jpg))
+![imageTitle](https://raw.githubusercontent.com/Rawierdt/GIE/main/title.jpg)
 
 [![Static Badge](https://img.shields.io/badge/%20build-MIT-brightgreen?logo=github&label=LICENSE)](https://github.com/Rawierdt/GIE/LICENSE)
 ![Static Badge](https://img.shields.io/badge/APRIL%202024-red?label=RELEASE%20DATE)
