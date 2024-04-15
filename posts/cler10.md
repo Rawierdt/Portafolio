@@ -5,7 +5,7 @@ date: "Mar 10 2022"
 cover_image: "/blog/cler.webp"
 alt: "Cler 10 Discord"
 tags1: "JavaScript"
-tags2: "Mongodb"
+tags2: "SQL"
 ---
 
 ![Cler](https://i.ibb.co/3h4PkHZ/clerbgred.gif)

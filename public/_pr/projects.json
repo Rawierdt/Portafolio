@@ -109,7 +109,7 @@
     },
     {
         "title": "Alo Polisia Community",
-        "language": "Administration",
+        "language": "PHP",
         "language2": "SQL",
         "date": "Dec 12 2022",
         "image": "https://i.ibb.co/pfsZcLx/alopolisia.png",
@@ -142,6 +142,18 @@
         "description1": "Java CRUD, using NetBeans and MySQL.",
         "description2": "Java CRUD (CREATE, READ, UPDATE, DELETE) for the faculty of computer science UPIICSA for student registration or delete, also you can put filter options, works with MySQL database.",
         "readMoreLink": "https://rawier.vercel.app/blog/java-crud"
+    },
+    {
+        "title": "La Casa de los Comics",
+        "language": "PHP",
+        "language2": "SQL",
+        "date": "Oct 14 2021",
+        "image": "https://i.ibb.co/ZJp4Nq6/laravel.jpg",
+        "altText": "La Casa de los Comics",
+        "githubLink": "https://github.com/Rawierdt/house-of-m",
+        "description1": "Comics, manga and merchandising store...",
+        "description2": "Presence in Torreon, Coahuila, Mexico and online sales to most of the country, unfortunately closed its sales in 2023, created with Laravel and Braintree for Paypal payments.",
+        "readMoreLink": "https://rawier.vercel.app/casa-de-los-comics"
     },
     {
         "title": "Espejito, Espejito..",

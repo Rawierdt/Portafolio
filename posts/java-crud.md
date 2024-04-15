@@ -5,7 +5,7 @@ date: "Dec 28 2021"
 cover_image: "/blog/JavaCrud.webp"
 alt: "Java"
 tags1: "Java"
-tags2: "MySQL"
+tags2: "SQL"
 ---
 
 # Java CRUD
