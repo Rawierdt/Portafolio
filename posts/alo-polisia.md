@@ -1,9 +1,9 @@
 ---
-title: "[EN] GIE Encrypt and Decrypt files"
+title: "[EN] ALO POLISIA Community"
 excerpt: "[EN] An Encrypt and Decrypt for files and folders!"
 date: "Dec 12 2022"
 cover_image: "/blog/alop.webp"
-alt: "La Casa de los Comics"
+alt: "Alo Polisia"
 tags1: "PHP"
 tags2: "SQL"
 ---

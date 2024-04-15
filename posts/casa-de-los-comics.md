@@ -1,6 +1,6 @@
 ---
-title: "[EN] GIE Encrypt and Decrypt files"
-excerpt: "[EN] An Encrypt and Decrypt for files and folders!"
+title: "[EN] Casa de los Comics Store"
+excerpt: "[EN] Comics, manga and merchandising store!"
 date: "Oct 14 2021"
 cover_image: "/blog/lalaravel.webp"
 alt: "La Casa de los Comics"
@@ -8,184 +8,29 @@ tags1: "PHP"
 tags2: "SQL"
 ---
 
-![imageTitle](https://raw.githubusercontent.com/Rawierdt/GIE/main/title.jpg)
+![imageTitle](https://i.ibb.co/f4TJcSD/casacomics.png)
 
-[![Static Badge](https://img.shields.io/badge/%20build-MIT-brightgreen?logo=github&label=LICENSE)](https://github.com/Rawierdt/GIE/LICENSE)
-![Static Badge](https://img.shields.io/badge/APRIL%202024-red?label=RELEASE%20DATE)
-![Static Badge](https://img.shields.io/badge/LANGUAGE-Python-yellow?logo=python)
+# CASA DE LOS COMICS
 
-# GIE
+## Laravel, PHP and MySQL
 
-## Encrypt and Decrypt
+Online store made in Laravel and Braintree for Paypal payments.
 
-An Encrypt and Decrypt for files and folders for Windows, written in Python.
-
-> [!CAUTION]
-> Disclaimer: This tool was created for educational purposes only. I do not take any responsibility for the misuse of this tool.
-
-![aCreator](https://i.ibb.co/q92xdX2/gie-terminal.gif)
-
-## Version
-
-**GIE V3.0**
+![StoreGIF](https://i.imgur.com/GaOgDrE.gif)
 
 ### Features
 
-Encrypt and decrypt your files and folders with AES, for any file, jpg, png, mp4, mp3, docx, pdf, etc...
+Products, Payment, Cart, Orders, Checkout, Payment, Admin panel, Paypal, Mastercard or Visa.
 
-**IMPORTANT TO READ ALL**
+## 📦 Products
 
-## 📦 Requirements
+![Products](https://i.imgur.com/wAEz6UJ.jpg)
 
-**[Python3](https://www.python.org/downloads/)**
+![Product](https://i.imgur.com/3omPNj5.jpg)
 
-**[Colorama](https://pypi.org/project/colorama/)**
+## 🛒 Cart
 
-**Subprocess**
-
-**Hashlib**
-
-**Cryptography**
-
-## 💻 Installation
-
-Execute the commands according to your case (Win or Linux)
-
-`pyhon` for windows
-
-Clone or Download this Repository
-
-```batch
-git clone git@github.com:Rawierdt/GIE.git
-```
-
-Change Directory
-
-```batch
-cd GIE
-```
-
-Run the setup.py file
-
-```batch
-python setup.py
-```
-
-OR install the dependencies manually
-
-Run the project
-
-```batch
-python gie.py -h
-```
-
----
-
-## For Encrypt
-
-Run `-h` for print the help/usage
-
-```batch
-python gie.py -h
-```
-
-To **Encrypt** a folder or file
-
-* ! The path must be enclosed in quotes " "
-
-For folders
-
-```batch
-python gie.py "C:\YOUR\FOLDER"
-```
-
-For only files
-
-```batch
-python gie.py "C:\YOUR\FILES.extension"
-```
-
-extension = jpg, png, mp3, mp4, docx, etc, etc...
-
-* ! A message will appear that says: "Enter a password:"
-
-! NOTE: **The password cannot contain the characters $ and "**
-
-Example Output:
-`python gie.py "D:\Sam\Plugins\IP.exe"`
-`Enter a password:`
-
-Note: The password will not be visible while you type it
-
-Once the password is entered, it will start encrypting the files with the extension **".gie"** and will generate a **".GKY"** file, which is very important to decrypt your original file.
-
-*"GKY" is the extension of the file containing the key for decryption, along with the password provided.*
-
-! *If you want to share the file with your colleague, you will need to provide him/her with three files, the .gie, the .GKY and the password.*
-
-## For Decrypt
-
-To **Decrypt** a folder or file
-
-* ! The path and password must be enclosed in quotes " "
-
-Run `-d` for decrypt
-Run `-p` for set the password used previously
-
-For folders
-
-```batch
-python gie.py -p "PASSWORD" -d "C:\YOUR\FOLDER"
-```
-
-For only files
-
-```batch
-python gie.py -p "PASSWORD" -d "C:\YOUR\FILES.extension.gie"
-```
-
----
-
-Example Output:
-`python gie.py -p "L1ñy*8Cv" -d "D:\Sam\Plugins\IP.exe"`
-
-The program will search if the .GKY file exists in the path provided and will try to decrypt the file with the password, if the password does not match the file will not decrypt or will decrypt corruptly, if the GKY does not exist, the program will throw an error message and will not be able to decrypt.
-
-It is very important to save the .GKY and the PASSWORD very well.
-
----
-
-### Encrypt function
-
-```python
-def encrypt_file(input_file: str, password: str):
-    password_bytes = password.encode()  # Convertir la contraseña a bytes
-    key_with_salt = generate_key(input_file, password_bytes)  # Generar la clave utilizando bytes
-    if key_with_salt is None:
-        print(Fore.RED + "No se pudo generar la clave." + Style.RESET_ALL)
-        return
-
-    key = key_with_salt[16:]  # Obtener la clave sin la sal
-
-    iv = os.urandom(16)
-
-    cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
-    encryptor = cipher.encryptor()
-
-    with open(input_file, "rb") as file_in:
-        data = file_in.read()
-
-    padded_data = data + b'\x00' * (-len(data) % 16)
-    encrypted_data = encryptor.update(padded_data) + encryptor.finalize()
-
-    output_file = input_file + ".gie"
-    with open(output_file, "wb") as file_out:
-        file_out.write(iv)
-        file_out.write(encrypted_data)
-
-    print(Fore.LIGHTMAGENTA_EX + f"Archivo ENCRIPTADO guardado como: {output_file}" + Style.RESET_ALL)
-    os.remove(input_file)
-```
+![Cart](https://i.imgur.com/0Pu4B4U.jpg)
 
 ### Decrypt function
 
