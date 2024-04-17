@@ -10,6 +10,7 @@ import styles from "./post.module.css";
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import c from 'react-syntax-highlighter/dist/cjs/languages/prism/c';
 import sql from 'react-syntax-highlighter/dist/cjs/languages/prism/sql';
+import php from 'react-syntax-highlighter/dist/cjs/languages/prism/php';
 import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
 import cpp from 'react-syntax-highlighter/dist/cjs/languages/prism/cpp';
 import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism';
@@ -28,6 +29,7 @@ import useTranslation from "next-translate/useTranslation";
 // Registra el lenguaje Python
 SyntaxHighlighter.registerLanguage('c', c);
 SyntaxHighlighter.registerLanguage('sql', sql);
+SyntaxHighlighter.registerLanguage('php', php);
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 SyntaxHighlighter.registerLanguage('cpp', cpp);
 SyntaxHighlighter.registerLanguage('nx', ignore);

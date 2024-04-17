@@ -32,69 +32,175 @@ Products, Payment, Cart, Orders, Checkout, Payment, Admin panel, Paypal, Masterc
 
 ![Cart](https://i.imgur.com/0Pu4B4U.jpg)
 
-### Decrypt function
+## ℹ️ Register
 
-```python
-def decrypt_file(input_file: str, password: bytes):
-    base_file = os.path.splitext(os.path.basename(input_file))[0]  # Remove all extensions
-    while "." in base_file:
-        base_file = os.path.splitext(base_file)[0]  # Remove all extensions
-        # Add the .key extension to the base file name
-    key_file = os.path.join(os.path.dirname(input_file), base_file + ".GKY")
-    print(f"Buscando el archivo de la clave: {key_file}")  # Print the name of the key file we are looking for
-    if os.path.exists(key_file):
-        with open(key_file, "rb") as f:
-            key_with_salt = f.read()
-            salt = key_with_salt[:16]  # Get the stored salt
-            derived_key = hashlib.pbkdf2_hmac('sha256', password, salt, 100000, 32)
-            # print("La clave se recuperó con éxito.")
-            # print(f"Longitud de la clave: {len(derived_key)}")
-            # print(f"Longitud del salt: {len(salt)}")
+![Cart](https://i.imgur.com/ZGpxdHz.jpeg)
 
-        with open(input_file, "rb") as file_in:
-            iv = file_in.read(16)
-            encrypted_data = file_in.read()
+## 💁 About
 
-        cipher = Cipher(algorithms.AES(derived_key), modes.CBC(iv), backend=default_backend())
-        decryptor = cipher.decryptor()
+![Cart](https://i.imgur.com/uovdT1p.jpeg)
 
-        decrypted_data = decryptor.update(encrypted_data) + decryptor.finalize()
-        unpadded_data = decrypted_data.rstrip(b'\\x00')
+---
 
-        output_file = os.path.splitext(input_file)[0]
-        with open(output_file, "wb") as file_out:
-            file_out.write(unpadded_data)
+Tables are loaded from the database named dbventascc into phpmyadmin.
 
-        print(Fore.LIGHTCYAN_EX + f"Archivo DESENCRIPTADO guardado como: {output_file}" + Style.RESET_ALL)
-        os.remove(input_file)
+## 🏨 Databases
 
-        # Delete the key file after successful decryption
-        os.remove(key_file)
-        # print(f"Archivo de la clave {key_file} eliminado con éxito.")
+![Cart](https://i.imgur.com/Abyk012.jpeg)
 
-    else:
-        print(Fore.LIGHTRED_EX + "No se encontró la clave." + Style.RESET_ALL)
+### Admins Table
+
+```sql
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `admins`
+--
+
+CREATE TABLE IF NOT EXISTS `admins` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `admins_email_unique` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `admins`
+--
+
+INSERT INTO `admins` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'admin', 'admin@root.com', '$2y$10$rGSPlWzTNYA.TrstOhMk.OQxt61X70IhN6ekvk328hFEEEMJIGMby', 'am6MEUQjGTeNmjnASaeBKpzbyrOfqPM39BK7qp0zaC0axXJncsvoUeXXaV8P', '2021-05-03 08:12:39', '2021-05-03 08:12:39');
+
+-- --------------------------------------------------------
+```
+
+### Payments Table
+
+```php
+<?php
+
+/**
+ * Laravel - A PHP Framework For Web Artisans
+ *
+ * @package  Laravel
+ * @author   Taylor Otwell <taylor@laravel.com>
+ */
+
+$uri = urldecode(
+    parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
+);
+
+// This file allows us to emulate Apache's "mod_rewrite" functionality from the
+// built-in PHP web server. This provides a convenient way to test a Laravel
+// application without having installed a "real" web server software here.
+if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
+    return false;
+}
+
+require_once __DIR__.'/public/index.php';
 
 ```
 
 ---
 
-### TODO List
+### 💻 Console
 
-* [ ] Password check
+![Console](https://i.imgur.com/mdeSN2n.jpeg)
 
-* [x] AES
+### Hashing Functions for passwords
 
-* [ ] UI Menu
+```sql
+<?php
 
-### 🤝 Contributing
+return [
 
-Contributions, issues and feature requests are welcome! Feel free to check issues page.
+    /*
+    |--------------------------------------------------------------------------
+    | Default Hash Driver
+    |--------------------------------------------------------------------------
+    |
+    | This option controls the default hash driver that will be used to hash
+    | passwords for your application. By default, the bcrypt algorithm is
+    | used; however, you remain free to modify this option if you wish.
+    |
+    | Supported: "bcrypt", "argon"
+    |
+    */
 
-### ❤️ Show your support
+    'driver' => 'bcrypt',
 
-Give a ⭐️ if this project helped you!
+    /*
+    |--------------------------------------------------------------------------
+    | Bcrypt Options
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the configuration options that should be used when
+    | passwords are hashed using the Bcrypt algorithm. This will allow you
+    | to control the amount of time it takes to hash the given password.
+    |
+    */
+
+    'bcrypt' => [
+        'rounds' => env('BCRYPT_ROUNDS', 10),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Argon Options
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the configuration options that should be used when
+    | passwords are hashed using the Argon algorithm. These will allow you
+    | to control the amount of time it takes to hash the given password.
+    |
+    */
+
+    'argon' => [
+        'memory' => 1024,
+        'threads' => 2,
+        'time' => 2,
+    ],
+
+];
+```
+
+---
+
+CRUD functions are available in the `App\Http\Controllers\AdminController` class.
+
+### 🍏 Panel / Dashboard
+
+![Panel](https://i.imgur.com/tjP4fUK.jpeg)
+
+### Inform creator (EXCEL, XML or CSV)
+
+![Informer creator](https://i.imgur.com/CEHGtaz.jpeg)
+
+### Create and update a client or employee
+
+![Update client](https://i.imgur.com/Uqew5jR.jpeg)
+
+### Category list
+
+![Category](https://i.imgur.com/VCgfsgQ.jpeg)
+
+### Index page
+
+![index](https://i.imgur.com/SWrm6qw.jpeg)
+
+---
+
+### ⬇ Download
+
+The project is deprecated and i will not continue to develop it, but you can download it and solve the bugs.
+
+[Download](https://www.mediafire.com/file/o1mz1wkf2cuq6nt/CC.zip/file)
 
 ### 📝 License
 
-Copyright © 2024 [Rawier](https://rawier.vercel.app). This project is [MIT](/LICENSE) licensed.
+Copyright © 2024 [Rawier](https://rawier.vercel.app).
