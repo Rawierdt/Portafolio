@@ -8,9 +8,7 @@ tags1: "PHP"
 tags2: "SQL"
 ---
 
-![imageTitle](https://raw.githubusercontent.com/Rawierdt/GIE/main/title.jpg)
-
-# GIE
+# ALO POLSIA
 
 ## Encrypt and Decrypt
 
