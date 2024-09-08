@@ -1,7 +1,7 @@
 ---
-title: "[ES] Prueba de blog"
+title: "[ES] PassPai"
 excerpt: "[ES] Aun no hay nada por agregar!"
-date: "Sep 06 2024"
+date: "Sep 08 2024"
 cover_image: "/blog/test.webp"
 alt: "TEST"
 tags1: "IRL"

@@ -4,7 +4,7 @@ excerpt: "[EN] Metadata eraser software for files"
 date: "Mar 27 2024"
 cover_image: "/blog/metacrawlerimg.webp"
 alt: "Metacrawler 2"
-tags1: "Javascipt"
+tags1: "JavaScript"
 tags2: "Tools"
 ---
 
