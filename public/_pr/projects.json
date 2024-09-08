@@ -13,6 +13,19 @@
         "GoToLink": "https://rawierdt.github.io/PassPai/"
     },
     {
+        "title": "GIE-UI",
+        "language": "Python",
+        "language2": "Bash",
+        "date": "Apr 29, 2024",
+        "image": "https://i.ibb.co/3CYxBk7/gieui-image.jpg",
+        "altText": "Gie Tool",
+        "githubLink": "https://github.com/Rawierdt/GIE-UI",
+        "description1": "An Encryption and Decryption Tool.",
+        "description2": "Encrypt and Decrypt for any files and folders for Windows, written in Python using AES, for any file, jpg, png, mp4, mp3, docx, pdf, etc, and folders or subfolders.",
+        "readMoreLink": "https://rawier.vercel.app/es/blog/gie",
+        "GoToLink": "https://rawierdt.github.io/scripts/GIE/"
+    },
+    {
         "title": "GIE",
         "language": "Python",
         "language2": "Bash",
@@ -95,7 +108,7 @@
         "language": "Python",
         "language2": "PowerShell",
         "date": "Apr 30, 2023",
-        "image": "https://i.ibb.co/DbCWDyJ/sislog-image.png",
+        "image": "https://i.ibb.co/Ry7TxWs/sislog2-image.png",
         "altText": "SisLog Audit Tool",
         "githubLink": "https://github.com/Rawierdt/Sislog",
         "description1": "Forensic and audit tool to generate logs.",

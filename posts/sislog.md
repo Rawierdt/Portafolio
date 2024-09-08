@@ -7,6 +7,8 @@ tags1: "Helpdesk"
 tags2: "Tools"
 ---
 
+![imagetitle](https://i.ibb.co/YcnFRM2/sislogtitle.jpg)
+
 # Tidex
 2 programs written in Python Metacrawler (Metadata Eraser) and IPTracker (IP Lookup).
 
