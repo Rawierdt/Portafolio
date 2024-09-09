@@ -2,7 +2,7 @@
 title: "[EN] GIE-UI Encrypt and Decrypt files"
 excerpt: "[EN] An Encrypt and Decrypt for files and folders!"
 date: "Apr 29 2024"
-cover_image: "/blog/giew.webp"
+cover_image: "/blog/gieui.webp"
 alt: "GIE"
 tags1: "Python"
 tags2: "Tools"

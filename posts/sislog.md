@@ -2,80 +2,108 @@
 title: "[EN] SISLOG"
 excerpt: "[EN] Metadata Eraser and IPLookup"
 date: "Apr 30 2023"
-cover_image: "/blog/metacrawler.webp"
-tags1: "Helpdesk"
+cover_image: "/blog/sislog.webp"
+tags1: "Python"
 tags2: "Tools"
 ---
 
 ![imagetitle](https://i.ibb.co/YcnFRM2/sislogtitle.jpg)
 
-# Tidex
-2 programs written in Python Metacrawler (Metadata Eraser) and IPTracker (IP Lookup).
+# SISLOG
 
-&nbsp;
-* Metacrawler: Erases metadata in any image or photo file.
-* IPTracker: Finds the location of an IP address provided by URL (optional) and finds its open ports as well as generates malicious IP address report.
+## Create logs, reports, issues and more.
+Windows 8/10/11 and Linux forensic tool to generate logs about installed programs, NetBios connections, ARP cache, DNS, processes, network, WIFI, services, computer modifications, scheduled tasks, mapped drives and more, all written in Python and output as TXT files.
 
-&nbsp;
+> You need administrator privileges to avoid bugs with the txt creation.
 
-## Here is Metacrawler
-![IMG](https://i.ibb.co/Qv9TfyZ/Metacrawler.png)
+I invite anyone to make modifications to this repository and improve the program for various operating systems regardless of their architecture or distribution.
 
-Code Example for Metacrawler
+![IMG](https://i.imgur.com/3Pw9O4u.png)
 
-```python
-# Se eliminan los metadatos
-def remove_exif():
-    global image_path
-    image = Image.open(image_path)
-    try:
-        for key in image.info:
-            if key in ExifTags.TAGS:
-                del image.info[key]
-        image.save(image_path)
-    except:
-        pass
 
-# Se carga la imagen
-def load_image():
-    global filename, image_path
-    root = tk.Tk()
-    root.withdraw()
-    image_path = filedialog.askopenfilename()
-    if image_path:
-        filename = os.path.basename(image_path)
-        image = pygame.image.load(image_path)
-        screen.blit(image, (0, 0))
-        remove_exif()
+### Features
+Encrypt and decrypt your files and folders with AES, for any file, jpg, png, mp4, mp3, docx, pdf, etc... 
+
+### Why GIE?
+GIE is the name of my first girldfriend (JK 😂), GIE is the acronym of **G**entle, **I**ntelligent and **E**asy file encryption.
+
+## 📦 Requirements
+
+- **[Python](https://www.python.org/downloads/)**, (not necessary).
+
+## 💻 Installation
+Execute the commands according to your case
+
+Run the project
+
+```batch
+python setup.py
 ```
 
-&nbsp;
-Code Example for IPTrack
-## Here is IPTracker
-![IMG](https://i.ibb.co/tbTMP0g/IPTracker.png)
+Then (or)
 
-```python
-# Verificar si la dirección IP es maliciosa utilizando la API de VirusTotal
-def is_malicious(ip, api_key):
-    url = f'https://www.virustotal.com/api/v3/ip_addresses/{ip}'
-    headers = {'x-apikey': api_key}
-    response = requests.get(url, headers=headers)
-    if response.status_code == 200:
-        data = response.json()
-        stats = data.get('attributes', {}).get('last_analysis_stats', {})
-        if stats.get('malicious') or stats.get('suspicious'):
-            return True
-    return False
+```batch
+python main.py
 ```
 
-## Modify 
-In IPTracker
-`api_key = 'API_KEY_HERE' with you API VirusTotal Key`
+Excecute **SISLOG.exe** file.
 
-# [Dowload Here From GitHub](https://github.com/Rawierdt/Metacrawler-IPTracker)
+---
+### VIEW DNS CACHE FUCTION
 
-# [Check the latest release](https://github.com/Rawierdt/Metacrawler-IPTracker/releases/tag/Metacrawlerv1)
+```python
+# Función para mostrar la cache dns.
+def get_dns_cache():
+    dns_cache = subprocess.check_output(["ipconfig", "/displaydns"]).decode("ISO-8859-1")
+    return dns_cache
+```
 
-&nbsp;
+### VIEW RUNNING TASK AND PROCESS FUCTION
 
-# ~ [Rawier](https://rawier.vercel.app/portfolio)💜
+```python
+# Función para ver los procesos ejecutandose al momento.
+def get_running_processes():
+    processes_info = ""
+    for process in psutil.process_iter():
+        try:
+            process_name = process.name()
+            processes_info += process_name + "\n"
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            pass
+    return processes_info
+
+
+# Función para ver los servicios ejecutandose en el momento.
+def get_running_services():
+    services_info = ""
+    for service in psutil.win_service_iter():
+        try:
+            if service.status() == "running":
+                services_info += service.name() + "\n"
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            pass
+    return services_info
+```
+---
+
+## Output TXT Example 
+![IMG](https://i.ibb.co/cx4bMw6/SisLog-2.jpg)
+
+## Download
+`git clone git@github.com:Rawierdt/SisLog.git`
+
+[⬇️ Check the latest release ⬇️](https://github.com/Rawierdt/SisLog/releases/tag/SISLOG)
+
+### 🤝 Contributing
+
+Contributions, issues and feature requests are welcome! Feel free to check issues page.
+
+### 💜 Show your support
+
+Give a ⭐️ if this _project helped you!_ 
+
+### 📝 License
+
+Copyright © 2024 [Rawier](https://rawier.vercel.app). This project is [MIT](/LICENSE) licensed.
+
+---
