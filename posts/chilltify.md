@@ -5,7 +5,7 @@ date: "Aug 14 2022"
 cover_image: "/blog/dianasessions.webp"
 alt: "entities"
 tags1: "JavaScript"
-tags2: "Clone"
+tags2: "Tools"
 ---
 
 ![Captura](https://raw.githubusercontent.com/Rawierdt/Chilltify/main/Screenshots/Index.png)
