@@ -1,5 +1,5 @@
 ---
-title: "[ES] PassPai"
+title: "[ES] PassPai Local Password Manager"
 excerpt: "[ES] Secure Password Gen. and Manager using AES!"
 date: "Sep 08 2024"
 cover_image: "/blog/passpai.webp"
