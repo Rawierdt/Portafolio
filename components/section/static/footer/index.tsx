@@ -26,14 +26,15 @@ const Footer: React.FC = (): ReactElement => {
               >
               <SkillsIcon text="Linkedin" children={<SiLinkedin />} />
             </a>
-            {/* <a
+            <a
                 href={config.socials.instagram}
                 className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Instagram"
               >
                 <SkillsIcon text="Instagram" children={<SiInstagram />} />
-            </a> */}
+            </a>
             <a
               href={config.socials.twitter}
               className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500 p-1"}

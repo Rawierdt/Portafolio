@@ -55,7 +55,7 @@ const NotFound: NextPage = (): ReactElement => {
     <>
     <noscript>
       <h1>
-        Yowo nowod towo enablowo Javascriptowo towo rowon thowo epicowo websitowo.
+      È necessario abilitare JavaScript per eseguire questa applicazione.
       </h1>
     </noscript>
     <Head>

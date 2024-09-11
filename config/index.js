@@ -9,7 +9,7 @@ export var config = {
         codewars: "https://www.codewars.com/users/Rawier",
         platzi: "https://platzi.com/p/alejandro-aguilar74/",
         steam: "https://steamcommunity.com/id/NexDrak",
-        instagram: "https://www.instagram.com/Rawierdt",
+        instagram: "https://www.instagram.com/alec.barret/",
         dev: "https://dev.to/Rawier",
         hackerone: "https://hackerone.com/rawier",
         discord: "https://discord.com/users/1035181000872951838",

@@ -30,15 +30,15 @@ tags2: "Tools"
 
 ## Features
 
-- **Generación de Contraseñas**: Crea contraseñas seguras para distintas redes sociales. 😄
-- **Gestión de Contraseñas**: Guarda y visualiza contraseñas para diversas cuentas.
-- **Interfaz Adaptativa**: Alterna entre un tema claro y oscuro. 🌸
-- **Diseño Moderno**: Interfaz limpia con un fondo sutil y efectos visuales atractivos. 🌸
-- **Descarga de Archivos**: Posibilidad de descargar los archivos generados a nivel local.
-- **Carga de Archivos**: Gracias a ello podra cargar archivos de forma segura y ver sus contraseñas.
-- **Seguridad en Nube**: Podrá acceder a sus contraseñas de forma segura **sin necesidad de descargar programas adicionales**. ☁️
-- **Seguridad a Nivel Militar**: La encriptación **AES-256** protege sus contraseñas contra ataques o robos. 🔒
-- **Uso de Contraseña Maestra**: Solo necesita recordar una contraseña para acceder a las otras. 🔑
+-🔵 **Generación de Contraseñas**: Crea contraseñas seguras para distintas redes sociales. 😄
+-🔵 **Gestión de Contraseñas**: Guarda y visualiza contraseñas para diversas cuentas.
+-🔵 **Interfaz Adaptativa**: Alterna entre un tema claro y oscuro. 🌸
+-🔵 **Diseño Moderno**: Interfaz limpia con un fondo sutil y efectos visuales atractivos. 🌸
+-🔵 **Descarga de Archivos**: Posibilidad de descargar los archivos generados a nivel local.
+-🔵 **Carga de Archivos**: Gracias a ello podra cargar archivos de forma segura y ver sus contraseñas.
+-🔵 **Seguridad en Nube**: Podrá acceder a sus contraseñas de forma segura **sin necesidad de descargar programas adicionales**. ☁️
+-🔵 **Seguridad a Nivel Militar**: La encriptación **AES-256** protege sus contraseñas contra ataques o robos. 🔒
+-🔵 **Uso de Contraseña Maestra**: Solo necesita recordar una contraseña para acceder a las otras. 🔑
 
 ## 💻 Installation
 
@@ -113,16 +113,15 @@ Para instalar y ejecutar KeyForge localmente, sigue estos pasos:
 
 > Se esta usando AES en modo GCM y PBKDF2 con SHA-256
 
-- AES-GCM no solo cifra los datos para mantenerlos confidenciales, sino que también incluye un mecanismo para verificar la integridad y autenticidad de los datos cifrados.
-- Rendimiento: Es conocido por su eficiencia y rendimiento, lo que lo hace adecuado para aplicaciones que requieren alta velocidad de cifrado y descifrado.
-- Uso Común: Es ampliamente adoptado en protocolos de seguridad como TLS (Transport Layer Security) y en aplicaciones que requieren cifrado seguro y rápido.
+-🔵 AES-GCM no solo cifra los datos para mantenerlos confidenciales, sino que también incluye un mecanismo para verificar la integridad y autenticidad de los datos cifrados.
+-🔵 Rendimiento: Es conocido por su eficiencia y rendimiento, lo que lo hace adecuado para aplicaciones que requieren alta velocidad de cifrado y descifrado.
+-🔵 Uso Común: Es ampliamente adoptado en protocolos de seguridad como TLS (Transport Layer Security) y en aplicaciones que requieren cifrado seguro y rápido.
 
-
-- PBKDF2 es una función criptográfica utilizada para derivar claves seguras a partir de contraseñas.
-- Resistente a ataques de fuerza bruta y ataques de diccionario.
-- “Key stretching” y aumenta significativamente el tiempo necesario para romper una contraseña.
-- Sal: Un valor aleatorio que se añade a la contraseña para asegurar que contraseñas iguales no generen la misma clave derivada.
-- Iteraciones: El número de veces que se repite el proceso de derivación. Un mayor número de iteraciones aumenta la seguridad.
+-🔵 PBKDF2 es una función criptográfica utilizada para derivar claves seguras a partir de contraseñas.
+-🔵 Resistente a ataques de fuerza bruta y ataques de diccionario.
+-🔵 “Key stretching” y aumenta significativamente el tiempo necesario para romper una contraseña.
+-🔵 Sal: Un valor aleatorio que se añade a la contraseña para asegurar que contraseñas iguales no generen la misma clave derivada.
+-🔵 Iteraciones: El número de veces que se repite el proceso de derivación. Un mayor número de iteraciones aumenta la seguridad.
 
 
 **generateEncryptionKey(password):**
