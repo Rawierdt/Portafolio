@@ -28,7 +28,7 @@ const Footer: React.FC = (): ReactElement => {
             </a>
             <a
                 href={config.socials.instagram}
-                className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
+                className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500 p-1"}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
