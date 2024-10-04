@@ -27,10 +27,10 @@ DM to: @NexDrak ( ╥ω╥ )
 
 * |Advertencia| Bot para discord en español escrito en node.js / discord.js.
 Informa cualquier problema o error.
-MD a @NexDrak ( ╥ω╥ )
+MD a @NexDrak ( ╥ω╥ )dassssssssssss
 
 #### *Spanish language only from here*
-# Lo que puede hacer en ATM
+# Lo que puede hacer en ATMs
 ### (Asynchronous Transfer Mode)
 - Usa el prefix. `c!`
   - ~~buscar manga, anime, reviews... owo~~ pronto.
@@ -111,19 +111,3 @@ Envia un gif o imagen
 * `c!maid`
 
 Lista completa de comandos en [Documentación](https://Rawier.gitbook.io/cler/)
-
-### Libraries and frameworks used
-* [dotenv](https://github.com/motdotla/dotenv#readme) and [express-js](http://expressjs.com/)
-* [typescript](https://www.typescriptlang.org/)
-* [discord.js](https://github.com/discordjs/discord.js/) and [@discordjs/opus](https://www.npmjs.com/package/@discordjs/opus)
-* [weather-js](https://github.com/devfacet/weather)
-* [mongoose](https://github.com/Automattic/mongoose)
-* [megadb](https://github.com/sergiom19/guia-megadb)
-* [nekos-image-api](https://www.npmjs.com/package/nekos-image-api) and [nekos.life](https://github.com/Nekos-life/nekos-dot-life)
-* [node-fetch](https://github.com/node-fetch/node-fetch)
-* [os](https://github.com/DiegoRBaquero/node-os)
-* [akaneko](https://npm.io/package/akaneko)
-* [star-labs](https://www.npmjs.com/package/star-labs)
-* [figlet](https://github.com/patorjk/figlet.js#readme)
-* [mech-aki](https://github.com/MechSlayer/mech-aki#readme)
-* [discord-tts](https://www.npmjs.com/package/discord-tts)
