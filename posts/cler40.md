@@ -1,11 +1,11 @@
 ---
-title: "[ES] Cler Discord Bot Version 1.0"
+title: "[ES] Cler Discord Bot Version 4.7"
 excerpt: "[Es] Discord bot in nodejs"
 date: "Oct 01 2024"
-cover_image: "/blog/cler.webp"
-alt: "Cler 10 Discord"
+cover_image: "/blog/cler2.webp"
+alt: "Cler 14 Discord"
 tags1: "JavaScript"
-tags2: "SQL"
+tags2: "MegaDB"
 ---
 
 ![Cler](https://raw.githubusercontent.com/Rawierdt/Cler/refs/heads/main/title.jpg)
@@ -13,53 +13,29 @@ tags2: "SQL"
 # Cler
 
 ## Cler Discord multipurpose bot
-**Cler** es una bot de Discord para administrar tu servidor, cuenta con multiples comandos como de administración, utilidad y de diversión.
 
-> [!NOTE]
-> Disclaimer: Any extended use of this tool to companies will incur charges.
+**Cler** es una bot de Discord para administrar tu servidor, cuenta con multiples comandos como de administración, utilidad y de diversión.
 
 [Cler's Monitor](https://bit.ly/cler-bot)
 
 [Invite Cler on your server](https://discord.com/oauth2/authorize?client_id=774150617546883073&permissions=8&scope=bot)
 
-* |Warning| Spanish discord bot, code in node.js / discord.js, but it is easy to learn each command.
-* Slash Commands Avaliable
-Please report any issue or bug.
-
-* |Advertencia| Bot para discord en español escrito en node.js / discord.js.
-* Soporta Slash Commands
-Informa cualquier problema o error.
+![Cler_Info](https://i.imgur.com/c7p8GwP.png)
 
 ## Lastest Version and What's New
 
 **v4.7.20**
 
-#### *Spanish language only from here*
+## Lo que puede hacer en ATM
 
-# Lo que puede hacer en ATM
-
-### (Asynchronous Transfer Mode)
+## (Asynchronous Transfer Mode)
 
 * Usa el prefix. `c!` o el Slash `/` Para comandos de moderación
-  * ~~buscar manga, anime, reviews... owo~~ pronto.
-* Ahora con mas secretos (｢• ω •)｢ (⌒ω⌒`)
 * Bot en Discord.js v14.16.2
-
-# Planes a futuro
-
-* Pagina side-side.
-* Comandos personalizados por servidor.
-* Sistema de mascota y economia.
-* Comandos para el desarrollo de sistemas embebidos.
-* Comandos para el aprendizaje de la ciberseguridad.
-* Comer bayas azules
 
 Postdata: Si abandoné este proyecto es porque me aburrí o hice una mejor versión.
 
-## 📦 Requirements
-
-- **1 GB disk space**
-- **256 MB RAM**
+![ClerAPPS](https://i.imgur.com/qs2J4eg.png)
 
 ## 💻 Installation
 
@@ -108,13 +84,13 @@ Para instalar y ejecutar Cler localmente, sigue estos pasos:
 
     Dirigete a tu servidor de discord al que invitaste a tu bot y ejecuta el comando de /help.
 
-# Comandos
+## Comandos
 
 Lista completa de comandos en [Documentación](https://rawier.gitbook.io/cler)
 
 Estructura y Diagramación en Repositorio de [Github](https://github.com/Rawierdt/Cler)
 
-### Admin / Mod
+## Admin / Mod
 
 * `c!mute  <@member> <reason>` Silencia al miembro etiquetado.
 * `c!unmute  <@member> <reason>` Quita el Silenco del miembro etiquetado.
@@ -127,52 +103,116 @@ Estructura y Diagramación en Repositorio de [Github](https://github.com/Rawierd
 
 Lista completa de comandos en [Documentación](https://rawier.gitbook.io/cler)
 
-### Acción
-
-* `c!hug  <@member>` Envia un Gif de Abrazo / Imagen.
-* `c!kiss <@member>` Envia un Gif de Beso / Imagen.
-* `c!pat <@member>` Envia un Gif de Caricia / Imagen.
-* `c!slap <@member>` Envia un Gif de Golpe / Imagen.
-* `c!cry` Envia un Gif de Llorar / Imagen.
-* `c!angry` Envia un Gif de Enojo / Imagen.
-* `c!sleep` Envia un Gif de Dormir / Imagen.
-* `c!bored` Envia un Gif de Aburrido / Imagen.
-
-Lista completa de comandos en [Documentación](https://rawier.gitbook.io/cler)
-
-### Diversión
-
-* `c!8ball  <@member>` Da respuesta aleatoria a un apregunta de tu interes.
-* `c!ascii <@member>` envia un texto en ascii.
-* `c!say <args>` repite el texto dicho.
-* `c!say embed <args>` repite lo que hayas dicho pero en texto embebido.
-* `c!love <@member>` Mide tu compatibilidad de amor con el usuario mencionado.
-* `c!chiste` Envia una imagen con chiste / Imagen.
-
-Lista completa de comandos en [Documentación](https://rawier.gitbook.io/cler)
-
-### Utileria
-
-* `c!avatar  <@member>` Envia el avatar de un usuario Gif / Imagen.
-
-Lista completa de comandos en [Documentación](https://rawier.gitbook.io/cler)
-
 ### Comandos contextuales
 
 * `Ver Avatar` Envia el avatar de un usuario Gif / Imagen.
 
 Lista completa de comandos en [Documentación](https://rawier.gitbook.io/cler)
 
-### Libraries and frameworks used
+---
 
-* [dotenv](https://github.com/motdotla/dotenv#readme) and [express-js](http://expressjs.com/)
-* [typescript](https://www.typescriptlang.org/)
-* [discord.js](https://github.com/discordjs/discord.js/) and [@discordjs/opus](https://www.npmjs.com/package/@discordjs/opus)
-* [megadb](https://github.com/sergiom19/guia-megadb)
-* [node-fetch](https://github.com/node-fetch/node-fetch)
-* [os](https://github.com/DiegoRBaquero/node-os)
-* [figlet](https://github.com/patorjk/figlet.js#readme)
-* [discord-tts](https://www.npmjs.com/package/discord-tts)
+### COMMAND WARN SLASH Y PREFIX
+
+```javascript
+const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
+const db = require('megadb');
+const warnDB = new db.crearDB('warnings'); // Usar crearDB para inicializar la base de datos
+
+module.exports = {
+  data: new SlashCommandBuilder()
+    .setName('warn')
+    .setDescription('Advierte a un miembro del servidor.')
+    .addUserOption(option =>
+      option.setName('user')
+        .setDescription('El usuario que deseas advertir')
+        .setRequired(true))
+    .addStringOption(option =>
+      option.setName('reason')
+        .setDescription('Razón de la advertencia')
+        .setRequired(false))
+    .setDefaultMemberPermissions(PermissionFlagsBits.ModerateMembers), // Permisos de advertencia
+
+  name: 'warn', // Nombre para comandos con prefijo
+  description: 'Advierte a un miembro del servidor.',
+  
+  async executeSlash(interaction) {
+    const member = interaction.options.getMember('user');
+    const reason = interaction.options.getString('reason') || 'No se proporcionó razón.';
+    await this.warnMember(interaction, member, reason);
+  },
+  
+  async executePrefix(message, args) {
+    const member = message.mentions.members.first();
+    const reason = args.slice(1).join(' ') || 'No se proporcionó razón.';
+    if (!member) {
+      //<a:denyxbox:1287542408082358292> son emojis globales, subidos desde discord dev portal
+      return message.reply('<a:denyxbox:1287542408082358292> | Por favor menciona a un usuario válido.');
+    }
+    await this.warnMember(message, member, reason);
+  },
+
+  async warnMember(context, member, reason) {
+    const isInteraction = !!context.isCommand;
+
+    // Verificar si tiene permisos de advertencia (solo en prefijos)
+    if (!isInteraction && !context.member.permissions.has('MODERATE_MEMBERS')) {
+      return context.reply({ content: '<:win11erroicon:1287543137505378324> | No tienes permiso para advertir miembros.', ephemeral: true });
+    }
+
+    if (!member) {
+      return context.reply({ content: '<:440warning:1287542257985126501> | Por favor selecciona a un miembro válido.', ephemeral: true });
+    }
+
+    try {
+      // Intentar enviar un mensaje directo al usuario
+      try {
+        await member.send(`<a:1302moderatorprogramsalumnia:1287542225399709737> Has recibido una advertencia en el servidor ${context.guild.name} por ${context.user.tag}. Razón: ${reason}`);
+      } catch (error) {
+        console.log(`[LOG] No se pudo enviar un mensaje directo a ${member.user.tag}.`);
+      }
+
+      // Registrar advertencia en MegaDB
+      if (!await warnDB.has(`warnings.${member.id}`)) {
+        await warnDB.set(`warnings.${member.id}`, []);
+      }
+      await warnDB.push(`warnings.${member.id}`, { 
+        reason: reason, 
+        moderator: context.user.tag, 
+        timestamp: new Date().toISOString() 
+      });
+
+      // Crear embed para notificar al canal
+      const warnEmbed = new EmbedBuilder()
+        .setColor(0xffff00) // Amarillo
+        .setTitle('<a:1302moderatorprogramsalumnia:1287542225399709737> **ADVERTENCIA**')
+        .setDescription(`${member.user.tag} ha recibido una advertencia.`)
+        .addFields(
+          { name: '<a:9755discordstaffanimated:1287542237571321896> Moderador', value: `${context.user.tag}`, inline: true },
+          { name: '<:discordcopyid:1287542182080679997> Miembro', value: `${member.user.tag}`, inline: true },
+          { name: '<:discordeditprofile:1287542190926467094> Razón', value: reason, inline: false }
+        )
+        .setThumbnail(member.user.displayAvatarURL())
+        .setTimestamp()
+        .setFooter({ text: 'Advertencia registrada', iconURL: context.user.displayAvatarURL() });
+
+      // Enviar el embed como respuesta
+      await context.reply({ embeds: [warnEmbed] });
+
+      // Log en consola
+      console.log(`[LOG] ${context.user.tag} ha advertido a ${member.user.tag} en ${context.guild.name}`);
+    } catch (error) {
+      console.error(error);
+      context.reply({ content: 'Hubo un error al advertir a este miembro.', ephemeral: true });
+    }
+  },
+};
+```
+
+El apartado o modulo más complejo es el index.js, pero debido a que es muy largo no pienso ponerlo, recomiendo revisar el github del proyecto.
+
+Pero en resumen el proyecto lo revivi, si lo abandono de nuevo es porque me aburri jajaja, asi que ahora tiene mas comandos y tiene una funcion de guardar, a si, lo aloje en un intel celeron con poca ram, de igual forma en otro blog daré las caracteristicas del NAS.
+
+---
 
 ## 🤝 Contributing
 
